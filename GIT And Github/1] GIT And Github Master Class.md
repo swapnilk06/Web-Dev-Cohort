@@ -23,4 +23,33 @@ E.g. Perspective through Coder -
 
 #### What problem we can forcast or detecting?
 - Our code is too big & segregate or separated it on multiple files.
-- & What problem problem we can finds? - Tracking, Code backup.
+- & What problem problem we can finds?
+  - Tracking,
+  - Code backup.
+-  Below `Google Doc` history example is a same for code write by coder.
+
+E.g. - Google Docs maintain linear history. What's benefit of maintain history?
+       - Tracking (Whats changes past time)
+       - Direct go that time & come current time.
+       - It's very important thing for we can work on big size document.
+<br>
+
+##### 1st Problem : Understanding the problem Tracking
+- History can easy to tracking of whats time to we can change code, for reword code, What past lines make bugs?
+- Solution :
+
+##### 2nd Problem : Backup
+- Collaboration is one of them problem (Multiple peoples can't work on single PC).
+
+ <br>
+
+##### Solution : History Management
+- Problem is - we can write code on "local machine" how to make history of it?
+- For solving this type of problem we required one `System.`
+- System that maintain history of local code.
+- We can solve this type of problem through `VCS.`
+- VCS(`Version Control System`) that system can  basically do versioning of your code or files.
+- Versioning is nothing but a "maintaining history".
+- VCS E.g. GIT, Subversion, Mercurial... etc.
+- 20 min 
+- 
