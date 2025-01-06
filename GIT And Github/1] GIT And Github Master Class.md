@@ -65,17 +65,50 @@ E.g. - Google Docs maintain linear history. What's benefit of maintain history?
 ```
 Q. What is Network Simulation?
 Q. How to makes your own VCS like GIT system?
+Q. Project - Own ZOOM system
 ```
 
 ### GIT internal working -
 
 - Q. How to use GIT?
-  - On Terminal : step to open VS Code using GIT
-  - mkdir(make folder) - hello-git
-    - ```mkdir hello-git```
-    - ```cd hello-git```
-    - ```code .```
-  - Our project name is <b>hello-git</b>
+  - On Terminal : step to open folder in VS Code
+    - `mkdir hello-git`
+    - `cd hello-git`
+    - `code .`
+  - Our project name or folder name is <b>"hello-git"</b>
+  - Project(under files) currently not tracking?
+    - All project in our <b>machine not tracking or version control</b> all by default.
+ - `git init` :
+   - its told to git for start <b>tracking or version controling</b> this project folder.
+   - `git init` its <b>initialize git</b> in whole project.
+ - After `git init` they gives msg `Initialized empty Git repository in C:/Users/s/Desktop/Web Dev Cohort/hello-git/.git/` & its start to track our project.
+- `pwd` : Present working directory.
+
+- Q. How GIT work of tracking?
+  - GIT can make hidden folder is `.git`
+  - `ls` not showing hidden folder, but `ls -a`(in mac) shows hidden folders.
+  - `.git` is only file system.
+  - `.git` : its stores all changes of our projects.
+  - `U` : means `Untracked` bcz, "GIT by default can't track any file."
+  - `A` : means `Index Added` individual file into a tracking.
+    
+- Q. How to told GIT for track on (untracked)file?
+- `git add<file name>` : `git add hello.txt` & on it show `U` to `A`.
+- In reality, more files are present in the file.
+  - `git add .` : After `git add` all overs files & folders are start for tracking.
+- `cat hello.txt` : showa all content of file.
+- in `.git/index` file include what are tracking or not?
+- 
+  
+<br>
+
+> NOTE* - <br>
+> - `git init` -> Start for folder tracking.
+> - `git add<filename>` -> track individual file.
+> - `git add .` -> tracking all files in particular folder.
+> - 
+
+45 min
 
 
 
