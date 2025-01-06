@@ -50,6 +50,34 @@ E.g. - Google Docs maintain linear history. What's benefit of maintain history?
 - We can solve this type of problem through `VCS.`
 - VCS(`Version Control System`) that system can  basically do versioning of your code or files.
 - Versioning is nothing but a "maintaining history".
-- VCS E.g. GIT, Subversion, Mercurial... etc.
-- 20 min 
-- 
+- VCS E.g. GIT, Subversion, Mercurial, Perforce... etc.
+
+
+> NOTE* - <br>
+> - GIT build by <b>Linus Torvalds,</b> is also build <b>Linux</b>.
+> - Features - Its supoort Branching but Mercurial not supported branching.
+>            - Linux have active contributors.
+> - This reasons <b>GIT</b> in market.
+> - Then <b>GIT</b> most popular one in the market.
+
+<br>
+
+```
+Q. What is Network Simulation?
+Q. How to makes your own VCS like GIT system?
+```
+
+### GIT internal working -
+
+- Q. How to use GIT?
+  - On Terminal : step to open VS Code using GIT
+  - mkdir(make folder) - hello-git
+    - ```mkdir hello-git```
+    - ```cd hello-git```
+    - ```code .```
+  - Our project name is <b>hello-git</b>
+
+
+
+
+
