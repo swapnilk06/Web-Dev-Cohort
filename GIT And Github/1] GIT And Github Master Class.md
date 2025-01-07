@@ -92,25 +92,40 @@ Q. Project - Own ZOOM system
   - `U` : means `Untracked` bcz, "GIT by default can't track any file."
   - `A` : means `Index Added` individual file into a tracking.
     
-- Q. How to told GIT for track on (untracked)file?
-- `git add<file name>` : `git add hello.txt` & on it show `U` to `A`.
-- In reality, more files are present in the file.
-  - `git add .` : After `git add` all overs files & folders are start for tracking.
-- `cat hello.txt` : showa all content of file.
-- in `.git/index` file include what are tracking or not?
-- 
-  
+- Q. How to told GIT for track on (untracked)files?
+  - `git add<file name>` : `git add hello.txt` & on it show `U` to `A`.
+  - In reality, more files are present in the file.
+    - `git add .` : After `git add` all overs files & folders are start for tracking.
+  - `cat hello.txt` : showa all content of file.
+  - `.git/index` : in this file include what are tracking or not?
+  - `.git status` : internally read git folder & visualize it on text format on screen.
+
+> NOTE* -
+> - `git init`, `git add .`, `git add file`, `git status` all can READ/WRITE of .git file.
+> - All tracking are under our `.git` in local machine.
+
 <br>
 
-> NOTE* - <br>
+- Q. How to Commit files?
+  - Before commit all files are in `staging area`.
+  - All feature ready files goes to `Commit`. (E.g. Fully feature add like payment gatway integration)
+  - `git commit -m "<msg>"` : `git commit -m "add v0 feature to hello"` after it create checkpoint automatic.
+  - Commit is basically like `checkpoint(snapshot)`.
+  - Every commit have separate `ID` or `HASH`.
+  - `git log` : Display history info `HASH`, `Autor`, publish `Date`.
+ 
+<br>
+
+> NOTE* - In short <br>
 > - `git init` -> Start for folder tracking.
-> - `git add<filename>` -> track individual file.
-> - `git add .` -> tracking all files in particular folder.
-> - 
+> - `git add<filename>` -> Track individual file.
+> - `git add .` -> Tracking all files in particular folder.
+> - `.git status`  -> Whats happening(shows tracked & untracked files).
+> - `git commit -m "<msg>"` -> Make commit of all tracking files.
+> - `git log` -> Shows our history.
 
-45 min
 
-
+53 min
 
 
 
