@@ -113,7 +113,8 @@ Q. Project - Own ZOOM system
   - Commit is basically like `checkpoint(snapshot)`.
   - Every commit have separate `ID` or `HASH`.
   - `git log` : Display history info `HASH`, `Autor`, publish `Date`.
- 
+  - `M` : means `Modify` Changes under file.
+  - `git diff` : Modification or showing difference between past & current changes.
 <br>
 
 > NOTE* - In short <br>
@@ -123,9 +124,8 @@ Q. Project - Own ZOOM system
 > - `.git status`  -> Whats happening(shows tracked & untracked files).
 > - `git commit -m "<msg>"` -> Make commit of all tracking files.
 > - `git log` -> Shows our history.
+> - `git diff` : Showing modification
 
-
-53 min
 
 
 
