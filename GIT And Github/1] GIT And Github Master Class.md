@@ -112,9 +112,28 @@ Q. Project - Own ZOOM system
   - `git commit -m "<msg>"` : `git commit -m "add v0 feature to hello"` after it create checkpoint automatic.
   - Commit is basically like `checkpoint(snapshot)`.
   - Every commit have separate `ID` or `HASH`.
-  - `git log` : Display history info `HASH`, `Autor`, publish `Date`.
+  - `git log` : Display history info as `HASH` or `ID`, `Autor - Swapnil Kathale <swapnilkathale111@gmail.com>`, publish `Date - Wed Jan 8 05:37:51 2025`.
   - `M` : means `Modify` Changes under file.
-  - `git diff` : Modification or showing difference between past & current changes.
+  - `git diff` : Modification or showing difference between past commit & current commit.
+    - git diff showing changes - <br>
+      ```
+      Hello World I am V0
+      \ No newline at end of file
+      +Hello World I am V1
+      \ No newline at end of file
+      ```
+
+- Q. How to GIT tracking work? How to known git whats before & whats on current in `.git dir`?
+  - `cd .git` : go to directory folder that 1 of them is "objects" folder.
+  - `ls` : show all folders insides of .git.
+  - `52f39be1255355b46d9303f6d0c90d49796ac371` : git commit id.
+    - `cd .git/objects/` : then they show multiple folders `4b`,`52`, `5f`, `7c`, `ce`, `info`, `pack`.
+    - `cd 52` : `52` is same number of commit id & insode it `f39be1255355b46d9303f6d0c90d49796ac371` is same folder
+    - `cat f39be1255355b46d9303f6d0c90d49796ac371` : file is compress then not known what is that?
+    - `git cat-file -p 52f39be1255355b46d9303f6d0c90d49796ac371` : view all compress content.
+    - `git cat-file -t 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows its a commit type.
+      
+      
 <br>
 
 > NOTE* - In short <br>
@@ -126,6 +145,6 @@ Q. Project - Own ZOOM system
 > - `git log` -> Shows our history.
 > - `git diff` : Showing modification
 
-
+1:0:0
 
 
