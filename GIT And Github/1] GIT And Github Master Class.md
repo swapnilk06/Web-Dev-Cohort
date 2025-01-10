@@ -133,18 +133,21 @@ Q. Project - Own ZOOM system
     - `git cat-file -p 52f39be1255355b46d9303f6d0c90d49796ac371` : view all compress content.
     - `git cat-file -t 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows its a commit type.
       
-      
 <br>
 
-> NOTE* - In short <br>
+> NOTE* - In short GIT commands <br>
 > - `git init` -> Start for folder tracking.
 > - `git add<filename>` -> Track individual file.
 > - `git add .` -> Tracking all files in particular folder.
-> - `.git status`  -> Whats happening(shows tracked & untracked files).
+> - `.git status`  -> Whats happening in changes(shows tracked & untracked files).
 > - `git commit -m "<msg>"` -> Make commit of all tracking files.
 > - `git log` -> Shows our history.
-> - `git diff` : Showing modification
+> - `git diff` -> Showing modification
 
-1:0:0
+
+#### Short steps file using GIT -
+- `git add .` : stage the file.
+- `git commit -m "this is my version 2"`
+- `git log` 0
 
 
