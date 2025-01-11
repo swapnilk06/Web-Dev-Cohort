@@ -134,17 +134,6 @@ Q. Project - Own ZOOM system
     - `git cat-file -p 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows all content display on terminal. i.e. tree, parent, author, committer
     - `git cat-file -t 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows a type i.e. commit.
     - - `git cat-file -s 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows size i.e. 245.
-      
-<br>
-
-> NOTE* - In short GIT commands <br>
-> - `git init` -> Start for folder tracking.
-> - `git add<filename>` -> Track individual file.
-> - `git add .` -> Tracking all files in particular folder.
-> - `.git status`  -> Whats happening in changes(shows tracked & untracked files).
-> - `git commit -m "<msg>"` -> Make commit of all tracking files.
-> - `git log` -> Shows our history.
-> - `git diff` -> Showing modification
 
 - Every commit have reference of old or past commit. 
 - (HEAD -> main) they are similar of `Linked List`.
@@ -152,6 +141,7 @@ Q. Project - Own ZOOM system
 <br>
 
 #### GIT commands that used mostly -
+
 - As "S/W Engineer 98%" we can use below 3 commands only.
   - 1] `git init`
   - 2] `git add .` : stage the file.
@@ -184,5 +174,47 @@ Q. Project - Own ZOOM system
   - GIT work same as hash i.e. `GIT read all of our files & creates its hash` & that hash as a commit massage.
   - That benefit is - in our file don't make changes then don't create its hash.
   - Thats make Unique identifier of any commit.
+
+<br>
  
+> `Research on Spotify 'MAYA'` topic 
+ 
+<br>   
+
+- Q. How to reset or back on history through GIT?
+  - `git reset 52f39be` : Its back in history of git but changes still as it's present(It shows as modify or in stagging area).
+    - If we use `git reset 52f39be` possible to going to present or revert back because stagging area is present.
+  - `git reset --hard 52f39be` : Its back in history with all as it's in starting phase(without present of any new content for stagging).
+    - If we use `git reset --hard 52f39be` then you can't back on present or revert to current before going in history.
+  
+
+<br>
+
+> NOTE* - In short GIT commands <br>
+> - GIT is VCS & its manage all change under `.git` folder.
+> - `git init` -> Start for folder tracking.
+> - `git add<filename>` -> Track individual file.
+> - `git add .` -> Tracking all files in particular folder.
+> - `.git status` -> Whats happening in changes(shows tracked & untracked files).
+> - `git commit -m "<msg>"` -> Make commit of all tracking files.
+> - `git log` -> Shows our history.
+> - `git diff` -> Showing modification
+> - `git log --oneline` -> All commits in one line.
+> - `git reset <ID>` -> Possible back to history & revert to present with all stagging & without stagging present. 
+> - `git reset --hard <ID>` -> Hard reset not possible to revert in present, it start from begining to from 'ID' commit. 
    
+
+<br>
+
+
+#### Collabration through GIT using `GITHUB` -
+- It's simple we can share folder only.
+- Problem with centralize as pendrive sharing device -
+  - It's not easy to share folder & code with <i>pendrive</i>.
+  - In same file with same changes which one to give 1st.
+    - E.g. Same file like hello.txt change from both side that conflict which one is source of truth.
+- We can need `one source of truth` & `one central place` which can act as a source of truth + one device that connect with internet & also work with remotely.
+- That problem of solution we use `GITHUB`.
+- 
+
+
