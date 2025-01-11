@@ -217,10 +217,12 @@ Q. Project - Own ZOOM system
 - That problem we can use solution as `GITHUB`.
 - GITHUB is saying we can `PUSH` as well as `PULL` form both sides &
 - `GITHUB` act as a central system. Which can also store our commits, also gives cloud backup, gives collabtative & provide UI to show all of things.
-- Example GIT using GITHUB :
+- GITHUB using GIT commands :
   - 1] `git init`
   - 2] `git add .`
   - 3] `git commit -m "changed to V2"`
-  - 
+  - 4] Whatever push & pull on github how to say : `git remote add origin https://github.com/swapnilk06/Web-Dev-Cohort-Practice.git`
+  - 5] `git remote -v`
 
 
+1:38
