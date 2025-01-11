@@ -131,8 +131,9 @@ Q. Project - Own ZOOM system
     - `cd .git/objects/` : then they show multiple folders `4b`,`52`, `5f`, `7c`, `ce`, `info`, `pack`.
     - `cd 52` : `52` is same number of commit id & insode it `f39be1255355b46d9303f6d0c90d49796ac371` is same folder
     - `cat f39be1255355b46d9303f6d0c90d49796ac371` : file is compress then not known what is that?
-    - `git cat-file -p 52f39be1255355b46d9303f6d0c90d49796ac371` : view all compress content.
-    - `git cat-file -t 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows a commit type.
+    - `git cat-file -p 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows all content display on terminal. i.e. tree, parent, author, committer
+    - `git cat-file -t 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows a type i.e. commit.
+    - - `git cat-file -s 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows size i.e. 245.
       
 <br>
 
@@ -144,18 +145,44 @@ Q. Project - Own ZOOM system
 > - `git commit -m "<msg>"` -> Make commit of all tracking files.
 > - `git log` -> Shows our history.
 > - `git diff` -> Showing modification
-> - Every commit have reference of old or past commit. 
-> - (HEAD -> main) they are similar of `Linked List`.
+
+- Every commit have reference of old or past commit. 
+- (HEAD -> main) they are similar of `Linked List`.
 
 <br>
 
-#### Short steps file using GIT -
-- `git add .` : stage the file.
-- `.git status` :after add in stage color of modified file red to green.
-- `git commit -m "this is my version 2"`
-- `git log`
-- `git diff`
+#### GIT commands that used mostly -
+- As "S/W Engineer 98%" we can use below 3 commands only.
+  - 1] `git init`
+  - 2] `git add .` : stage the file.
+  - 3] `git commit -m "MESSAGE"`
+- We can use below commands 0.5%.
+  - 1) `.git status` : shows stagging file (in green color) & file without stagging (in red color) (after file add in stage color of modified file shows red to green).
+  - 2) `git log` : we use as debugging purpose.
 
-Q. - Why git add every time?
-- 
+- `cat(Linux)` : File contents that print on terminal.
+- `git file` : Shows compressed file only(cat-compresed version)
+- `git cat-file (-t)(-s)(-p)` -> `-t` for type e.g. commit, `-s` for size & `-p` for print content on terminal.
 
+<br> 
+
+- Q. Why `git add .` every time?
+  -  After changing file or updated content of file then git treat as different file.(git have no any track of that file).
+  -  Fresh changes file thats objects have no any track of git.
+  -  You can include this on commit that reasons we everytime used `git add .`.
+  
+- Q. How hash created?
+  - Codes files read -> Hash using SHA1 algorithm -> i.e. your `Commit Hash`
+
+<br>
+
+- Q. What is hash?
+  -  Hash is algorithm that of using on any  `text` or `any file` or anything we can convert into string that `do not possible to dehash` after hash.
+  -  Text -> hash -> string
+
+- Q. Why GIT make unique identifier of any commit? 
+  - GIT work same as hash i.e. `GIT read all of our files & creates its hash` & that hash as a commit massage.
+  - That benefit is - in our file don't make changes then don't create its hash.
+  - Thats make Unique identifier of any commit.
+ 
+   
