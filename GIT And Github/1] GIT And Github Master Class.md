@@ -214,7 +214,13 @@ Q. Project - Own ZOOM system
   - In same file with same changes which one to give 1st.
     - E.g. Same file like hello.txt change from both side that conflict which one is source of truth.
 - We can need `one source of truth` & `one central place` which can act as a source of truth + one device that connect with internet & also work with remotely.
-- That problem of solution we use `GITHUB`.
-- 
+- That problem we can use solution as `GITHUB`.
+- GITHUB is saying we can `PUSH` as well as `PULL` form both sides &
+- `GITHUB` act as a central system. Which can also store our commits, also gives cloud backup, gives collabtative & provide UI to show all of things.
+- Example GIT using GITHUB :
+  - 1] `git init`
+  - 2] `git add .`
+  - 3] `git commit -m "changed to V2"`
+  - 
 
 
