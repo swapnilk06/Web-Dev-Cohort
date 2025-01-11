@@ -123,6 +123,7 @@ Q. Project - Own ZOOM system
       \ No newline at end of file
       ```
 
+#### For understanding -
 - Q. How to GIT tracking work? How to known git whats before & whats on current in `.git dir`?
   - `cd .git` : go to directory folder that 1 of them is "objects" folder.
   - `ls` : show all folders insides of .git.
@@ -131,7 +132,7 @@ Q. Project - Own ZOOM system
     - `cd 52` : `52` is same number of commit id & insode it `f39be1255355b46d9303f6d0c90d49796ac371` is same folder
     - `cat f39be1255355b46d9303f6d0c90d49796ac371` : file is compress then not known what is that?
     - `git cat-file -p 52f39be1255355b46d9303f6d0c90d49796ac371` : view all compress content.
-    - `git cat-file -t 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows its a commit type.
+    - `git cat-file -t 52f39be1255355b46d9303f6d0c90d49796ac371` : its shows a commit type.
       
 <br>
 
@@ -143,11 +144,18 @@ Q. Project - Own ZOOM system
 > - `git commit -m "<msg>"` -> Make commit of all tracking files.
 > - `git log` -> Shows our history.
 > - `git diff` -> Showing modification
+> - Every commit have reference of old or past commit. 
+> - (HEAD -> main) they are similar of `Linked List`.
 
+<br>
 
 #### Short steps file using GIT -
 - `git add .` : stage the file.
+- `.git status` :after add in stage color of modified file red to green.
 - `git commit -m "this is my version 2"`
-- `git log` 0
+- `git log`
+- `git diff`
 
+Q. - Why git add every time?
+- 
 
