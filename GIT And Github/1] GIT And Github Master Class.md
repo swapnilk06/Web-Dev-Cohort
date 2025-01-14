@@ -224,5 +224,7 @@ Q. Project - Own ZOOM system
   - 4] Whatever push & pull on github how to say : `git remote add origin https://github.com/swapnilk06/Web-Dev-Cohort-Practice.git`
   - 5] `git remote -v`
 
+<br>
 
-1:40 min
+#### For Collabration -
+- Setting -> Collaborators
