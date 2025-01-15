@@ -6,6 +6,7 @@ Web Dev Cohort by Hitesh C. &amp; Piyush G.
 
 `[5-1-25]`
 ### 1] - GIT And Github Master Class - `< Bonus Class >`
+<br>
 
 `[15-1-25]`
 ### 2] - Hello World
