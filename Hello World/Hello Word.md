@@ -57,9 +57,9 @@ Example through website `https://hiteshchoudhary.com/` & What's reason that webs
 #### `HTTP` as `Stateless Protocol` then how to build my account? How to bookmark in youtube? How does are possible?
 
 > NOTE* : <br>
-> In `HTTP` no any rule at present for maintain state. And not any provisions came that rules came in further.
-> HTTP is simply as sent request from computer to server & computer get respose from server. That our`HTTP`.
+> - In `HTTP` no any rule at present for maintain state. And not any provisions came that rules came in further.
+> - HTTP is simply work as, computer "sent request" to server & computer get "respose from server". That our `HTTP`.
 
 
-
+59 min
 
