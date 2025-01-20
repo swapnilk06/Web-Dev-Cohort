@@ -102,6 +102,22 @@ Example through website `https://hiteshchoudhary.com/` & What's reason that webs
 #### What will I do after knowing these information?
 - E.g. We knowing you login from safari, then we give popups as "Please download our IOS app." Or We login form android, them we give popup as "Please download our Android app." i.e. `good usecases`.
 - E.g. We also show ads.
-  - In traveling time we search plz suggest hotels then ads will give popup for "Best hotels". 
+  - Traveling time we search best hotel in ways, ads suggest best hotels are in budget.
+-  All informations of `HTTP Headers` are store on server & it came from client.
+<br>
 
-1:5:00 min
+### Request - Response Model
+- That simply as, broswer send resquest to web server & server return reponse to browser. i.e. `Request - Response Model`.
+- Browser send `HTTP Headers` information & same `HTTP Headers` information can server send to browser.
+  - E.g. Browser carries some information like Who am I?, What is my OS?, Which one is my browser?, When I request send?... also that tye of info server can send to browser like You were talking about this website, Take this website.
+
+#### Q. Response is a cookie?
+- In response may or may not be contain a cookie.
+- May be in response cookie are send or may be not send a cookie in response.
+- High chance to send cookie in response.
+
+#### Typpe of Request
+- Which types of request browser can send to server. lik Get, Post, Delete...
+
+
+1:10💯
