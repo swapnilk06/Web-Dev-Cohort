@@ -6,6 +6,7 @@
 > NOTE :
 > - We understanding base(foundation) `without code` then we write good code significantly.
 > - Computer means `Transfering information form 1 side to other side`.
+<br>
 
 ### Jargon in computer -
 Example through website `https://hiteshchoudhary.com/` & What's reason that website is so simple? - becz of, learning base from that understood easily.
@@ -23,7 +24,7 @@ Example through website `https://hiteshchoudhary.com/` & What's reason that webs
 - That things we easily understand, then any other tech like GraphQL, API, Server, MongoDB, mySQL these are easily understood.
 <br>
 
-# HTTP - Hypertext Transfer Protocol
+## HTTP - Hypertext Transfer Protocol
 
 > NOTE :
 > - All things of computer are not came from computer, that are came from `real world`, thats things are so common in real world.
@@ -32,11 +33,12 @@ Example through website `https://hiteshchoudhary.com/` & What's reason that webs
 - Transfer : `Moving from 1 side to other side`.
 - Hyertext : `It means only text documents that points another documents`.
     
-- Beginning of internet that time scientist work as only share <b>Text files</b> among ourselves. E.g. that reels send between me & my friend.
-    - Hypertext means -> that have only <b>text documents</b> but, that <b>text document that shares links that points another documents</b>.
-    - One such document that includes hyperlinks or hypertext that will be taking out form that document. i.e. work only of <b>hypertext</b>.
-    - Beginning time only share text(image sharing not present that time) with reference document that show learn link to learn other document.
-    - E.g. like wikipedia(without images).
+- Beginning of internet that time scientist work as only share <b>Text files</b> among ourselves.
+  - E.g. that reels send between me & my friend.
+- Hypertext means -> that have only <b>text documents</b> but, that <b>text document that shares links that points another documents</b>.
+- One such document that includes hyperlinks or hypertext that will be taking out form that document. i.e. work only of <b>hypertext</b>.
+- Beginning time only share text(image sharing not present that time) with reference document that show learn link to learn other document.
+  - E.g. like wikipedia(without images).
 <br>
 
 - Protocol making time they insure it can be `Human Readable`.
@@ -53,10 +55,10 @@ Example through website `https://hiteshchoudhary.com/` & What's reason that webs
 
 - HTTP as `Stateless Protocol`
 
-- State : means `Maintain state`
+#### State : means `Maintain state`
   - E.g. as game checkpoint, amazon/netflix movie watching pause & we continue from that pause time. i.e. is  `Maintain state`.
 
-- Stateless : `Not maintain state`
+#### Stateless : `Not maintain state`
   - Everytime we visit a page, they consider we are a new user.
     - E.g. we can open youtube in "incognito mode"(as country wise set youtube videos visible as same) becz, we have no any reference/preference, no any account logined, if youtube doesn't change its alogorithm. i.e. `Stateless Protocol`.
   - In `Stateless Protocol -> no any memory of "previous request"`.
@@ -76,6 +78,25 @@ Example through website `https://hiteshchoudhary.com/` & What's reason that webs
 ### Session
 
 #### Q. How to store a state?
-- We
+- After HTTP we need of session.
+  - E.g. Doctor appointment with you(that give time only for you), Session teacher with you i.e. Real world example we can store our information at session.
+- `Session` can `stored our state`.
+-  Session work simple have to `remember intraction between browser & server` in the format of `Cookie`.
+-  E.g. name = hitesh <- that is also cookie.
+- `Cookie` -> Key value pairs. It is just a information.
+- `Information`or`Cookie` also can be send by browser to server or also send by server to browser.
+  - E.g. No cookie came from sever side or not send cookie by browser i.e. Not get any information. 
+
+#### Q. What types of information on cookie?
+<br>
+
+### HTTP Headers 
+- `Headers` : Whenever browser can send info that called Headers. i.e. `headers means information`.
+- What type of information can send by HTTP Headers :
+  - `Client` : Who is the client?
+  - `Browser` : Who is the browser?
+  - `Date & Time` : What is date & time?
+  - `Cookie to store` : Do you want to keep stor cookie or not?
+
 
 
