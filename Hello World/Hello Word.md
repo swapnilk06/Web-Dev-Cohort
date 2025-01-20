@@ -71,7 +71,7 @@ Example through website `https://hiteshchoudhary.com/` & What's reason that webs
 - We can send web request & we get back web response. i.e. work of HTTP. But. that is not sufficient.
 <br>
 
-- Computer scientist think that, the web is advancing & introduce images in web that's celebrating movement & big acheivement in the web.
+> NOTE : Computer scientist think that, the web is advancing & introduce images in web that's celebrating movement & big acheivement in the web.
 <br>
 
 
@@ -97,6 +97,11 @@ Example through website `https://hiteshchoudhary.com/` & What's reason that webs
   - `Browser` : Who is the browser?
   - `Date & Time` : What is date & time?
   - `Cookie to store` : Do you want to keep stor cookie or not?
+  - E.g. That are questions, client have ask questioning stored in client, Browser info that login from safari or chrome...
 
+#### What will I do after knowing these information?
+- E.g. We knowing you login from safari, then we give popups as "Please download our IOS app." Or We login form android, them we give popup as "Please download our Android app." i.e. `good usecases`.
+- E.g. We also show ads.
+  - In traveling time we search plz suggest hotels then ads will give popup for "Best hotels". 
 
-
+1:5:00 min
