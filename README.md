@@ -9,4 +9,4 @@ Web Dev Cohort by Hitesh C. &amp; Piyush G.
 <br>
 
 `[15-1-25]`
-### 2] - Hello World
+### 1] - Hello World
