@@ -1,5 +1,5 @@
 
-#### `Bonus Class` : `11-1-25`
+#### `11-1-25`
 
 # HTML - Hello World
 
@@ -114,10 +114,38 @@ Example through website `https://hiteshchoudhary.com/` & What's reason that webs
 #### Q. Response is a cookie?
 - In response may or may not be contain a cookie.
 - May be in response cookie are send or may be not send a cookie in response.
-- High chance to send cookie in response.
+- High chance to send cookie while sending response.
 
-#### Typpe of Request
-- Which types of request browser can send to server. lik Get, Post, Delete...
+#### `Request`
+Type of Request - 
+- The request can be of many types like Get, Post, Delete...
+- It is also important to know that what type of request browser can send to sever.
+- Get(give the data) request
+  - E.g. we go to -> https://hiteshchoudhary.com/ our browser `GET Request` send to https://hiteshchoudhary.com/ `server` for get the data of this website.
+- Delete request
+  - E.g. Our browser can send request as `delete request` with headers(all information of user & also some cookies, references) correct to twitter server for delete some content.
+ 
+#### `Response`
+- After we send get request to server then `server responsiblity as send response to browser`. like 200, 404, 500...
+- Server how to know for all world wide website 404 means "Not Found" becz of, `Protocols(standards)`.
+- Rule are set while request send to server(That type of request only can send) similarly, some rules are defined for server or defined standards.
+  - E.g. Browser send GET request then server response "200" code or other code.
+All known as `softeares`.
+
+### Computer general things while response send to browser -
+- 1] `What action to perform` GET, POST...
+  - It shows what work as delete or post or send some one or get me back that called as `Verb` -> GET, POST... and other types of request.
+- 2] `Where to perform` http://api/hitesh.ai/auth
+   - It show where location we can send request. i.e. some URL.
+- 3] `After was it done` 200, 404...
+  - That send response to browswer whatever defined as rule.
+
+> NOTE : All in web development we learned that 3 general things only.
+<br>
+
+## HTTP/2 - Hypertext Transfer Protocol 2
 
 
-1:10💯
+
+
+  
