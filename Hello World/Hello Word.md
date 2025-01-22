@@ -157,12 +157,42 @@ All known as `softeares`.
 - After data transfering done through `HTTP` the version introduce after is that `HTTP version 1`.
 - No any important thing in that version 1.
 - HTTP/1 -> `Only send one request & get 1 response only.`
-- Majorly update of HTTP/1 is `we can send imgage`.
+- Majorly update of HTTP/1 is `we can send only imgage`(That time CSS not exists).
 - Image we can send that major part of `HTTP/2` or HTTP version 2.
 - But after HTTP/2 work that also working of HTTP/1.
 - Currently HTTP/1 also active working as much as working of HTTP/2.
 
 > NOTE :
-> - HTTP/1 work as fallback or backup of HTTP/2
+> - HTTP/1 work as fallback or backup or substitude of HTTP/2.
+> - HTTP/2 fallback also live still as HTTP/1.
+> - In many places today, HTTP/2 type requests can't be served.
+> - HTTPS/1 -> are not release publicly directly realease HTTP/1.1 version.  
 
-  1:20 min
+
+#### HTTP/2 -
+- HTTP/2 is enhance version of HTTP/1.
+- Big enhancement in HTTP/2 is -> we create file with multiple dependencies like images or there styling & things... thats `in single time all are load in HTTP/2`.
+- In one request HTTP/2 shared all required file to server.
+- HTTP/2 use `Multiplexing` -> send multiple file at same time.
+- HTTP/2 use `Compression` -> E.g. zoom also used Compression.
+  - E.g. - task as implement graph we required system data has huge data & that all data we convert into a data.
+    - Server can compress data & send compress data i.e. zip, gzip... That all move to our browser & expand it & create graph.
+    - That all possible bcz, `exsisting of HTTP/2`.
+- HTTP/2 showcasing 14 million customer transaction in single page. i.e. very big graph.
+- HTTP/2 use `Encryption` -> i.e. in format of `HTTPS`.
+- `Encryption` i.e. ABC as -> KYC. Real meaning of data we can hide & receiver can only knowing meaning of that code word.
+- In AWS we don't use HTTPS for internal communication.
+
+#### Q. Why `AWS not used HTTPS` for internal communication?
+  - Internal commuincation we send encrypted data( ABC as -> KYC ) to server & Server convert encrypted data ( KYC to -> ABC ).
+  - While internal working AWS give compute cost or calculate every cost on thing we work on it.
+  - Internal N/W are not introduced for public only internal.
+
+
+> NOTE :
+> -  Encryption also have protocol bcz, In computer every thing have protocol.
+> -  Big companies for internal communication they don't use HTTPS.
+<br>
+
+#### HTTPS -
+- HTTPS is only marketing emic.
