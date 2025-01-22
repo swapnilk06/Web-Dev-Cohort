@@ -194,5 +194,24 @@ All known as `softeares`.
 > -  Big companies for internal communication they don't use HTTPS.
 <br>
 
-#### HTTPS -
+#### HTTPS = `HTTP + TLS`
 - HTTPS is only marketing emic.
+- `TLS` - Transport Layer Security
+- While communication between browser & server with encyption way i.e. ABC as -> KYC. That communication proof required i.e. `cert.` or certificate.
+- Exchange that certification as proof of communication.
+- `cert.` -> as agreement means certificate.
+
+#### User Agent (Browser)
+  - TCP : Transmission Control Protocol
+  - FTP : FIle Transfer Protocol
+  - IP : Internet Protocol
+  - URL : Uniform Resource Locator
+  - DNS : Domain Name System Server (Point URL to IP)
+  - Header : Pass additional Information
+
+- `User Agent` -> that's agent can send request to server.
+- That no matter User Agent is only browser.
+- Information also send through code & send through browser.
+
+- `TCP` -> Transmit data. On bowser side transmision is data send to server & On server side transmision is data send to user.
+- Thats transmision data gives some rules. 
