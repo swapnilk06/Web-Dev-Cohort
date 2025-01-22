@@ -143,9 +143,26 @@ All known as `softeares`.
 > NOTE : All in web development we learned that 3 general things only.
 <br>
 
-## HTTP/2 - Hypertext Transfer Protocol 2
 
+## HTTP/2 (HTTP version 2) - Hypertext Transfer Protocol 2
 
+> NOTE :
+> - That our web 100% traffic, that of `80% of traffic` are run on our `HTTP/2`.
+> - HTTP/2 or HTTP version 2 is one of the most powerful version.
+> - `HTTP version 2` thats are not any connection related between Web3.
+> - `Web3 is only a marketing term`(Its shows only grater number or version than 2 only).
+> - We take seen `web3 as only term of new technology(new pprotcol or new set of tool) not as web enhancement`.
 
+#### HTTP/1 -
+- After data transfering done through `HTTP` the version introduce after is that `HTTP version 1`.
+- No any important thing in that version 1.
+- HTTP/1 -> `Only send one request & get 1 response only.`
+- Majorly update of HTTP/1 is `we can send imgage`.
+- Image we can send that major part of `HTTP/2` or HTTP version 2.
+- But after HTTP/2 work that also working of HTTP/1.
+- Currently HTTP/1 also active working as much as working of HTTP/2.
 
-  
+> NOTE :
+> - HTTP/1 work as fallback or backup of HTTP/2
+
+  1:20 min
