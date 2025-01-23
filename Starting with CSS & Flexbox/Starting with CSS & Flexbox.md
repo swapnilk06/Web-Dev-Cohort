@@ -36,14 +36,35 @@
 - In `Inspect mode` -> "element.style{_ _ _}" has taken background color as "red".
 - It only cascade only browser default property background-color as "buttonface" cascade with background color as "red".
 - They can't cascade whole properties all other property are same show as user agent can give i.e user agent chrome.
-
-
+<br>
 
 > NOTE :
 > - `CSS` -> means `Properties: Values` E.g. bacground-color: red; i.e. property.
-> - CSS doesn't limit on any creativity.
-
+> - In CSS `no any limit on creativity`. bcz, as creative as you want.
 <br>
+
+### 3 types of using CSS -
+
+#### `Inline CSS` : add CSS on in element attribute.
+``` CSS
+<button style="background-color: red; color: white" >Click Me</button>
+```
+- That CSS only work for button element.
+- Indirectly that not good add same property for others button. i.e. If we want to make any changes in the future, I will have to make every where to change.
+- Inline used only when we are doing changes specific element. That time we can used `Inline CSS`.
+- Inline CSS -> through `Style attribute` in element.
+- E.g. of Inline CSS
+``` CSS
+<body>
+      <p style="text-decoration: underline; background-color: blue; color: white;">This is a CSS Class</p>
+      <button style="background-color: red; color: white;" >Click Me</button>
+      <!-- This click me button default CSS by browser -->
+      <!-- style is attribute add in button -->
+</body>
+```
+  
+- Internal
+- External
 
 ### -
 
