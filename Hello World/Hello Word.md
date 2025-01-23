@@ -196,10 +196,10 @@ All known as `softeares`.
 
 #### HTTPS = `HTTP + TLS`
 - HTTPS is only marketing emic.
-- `TLS` - Transport Layer Security
+- TLS : `Transport Layer Security`
 - While communication between browser & server with encyption way i.e. ABC as -> KYC. That communication proof required i.e. `cert.` or certificate.
 - Exchange that certification as proof of communication.
-- `cert.` -> as agreement means certificate.
+- `cert.` -> as agreement means its certificate.
 
 #### User Agent (Browser)
   - TCP : Transmission Control Protocol
@@ -210,8 +210,31 @@ All known as `softeares`.
   - Header : Pass additional Information
 
 - `User Agent` -> that's agent can send request to server.
-- That no matter User Agent is only browser.
-- Information also send through code & send through browser.
+- That no matter browser is only User Agent bcz, information also send through code or send through browser or terminal.
+- `User Agent` means that send information or `its work as user for server`.
+  
+#### `TCP` : Transmit data.
+- We are on browser side transmision means "data send to server" & on server side transmision means "data send to user".
+- Thats data transmision gives some rules. that for controling information, where to send information...
 
-- `TCP` -> Transmit data. On bowser side transmision is data send to server & On server side transmision is data send to user.
-- Thats transmision data gives some rules. 
+#### `FTP` : Send information like mp3, mp4, csv, pdf...
+
+#### 'IP' : Every computer gives name i.e. IP.
+- E.g. My computer name is 'Raju bhai' i.e. not proper naming in internet world when data transmission.
+- Internet world our `machine gives name with internet protocol`.
+
+#### 'URL` : is only jargon word of 'Link'.
+- Locator -> Which track location
+- Resource -> Which is mp4 or mp3
+- Uniform -> It uniformaty to show same at every time
+- `URL` in further also called as `End point`.
+
+#### 'DNS` : Its point URL to 'IP'.
+- E.g. `https://hiteshchoudhary.com/` our info on server i.e. also it provide by AWS or google or our home inhouse server.
+- That is only a `machine` we also store home server.
+- E.g. When we try to call from phone which can we inform you i.e. Contacts app.
+- `DNS is internet contact` is same work as contacts. bcz, contact also we can remove or delete or add.
+- 
+
+
+
