@@ -270,4 +270,8 @@ All known as `softeares`.
 >   - That cache data temporary i.e. `Cache` things.
 <br>
 
-
+## Network Tab
+- On website `https://hiteshchoudhary.com/` & explore it.
+- Inspect -> Network Tab -> clean & relaod website
+- `hiteshchoudhary.com` -> Headers shows request type GET, Server is Vercel
+- Explore Network tab `https://hiteshchoudhary.com/` and `https://hitesh.ai/` sane website but some things are different.
