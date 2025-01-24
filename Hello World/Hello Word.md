@@ -161,13 +161,14 @@ All known as `softeares`.
 - Image we can send that major part of `HTTP/2` or HTTP version 2.
 - But after HTTP/2 work that also working of HTTP/1.
 - Currently HTTP/1 also active working as much as working of HTTP/2.
+<br>
 
 > NOTE :
 > - HTTP/1 work as fallback or backup or substitude of HTTP/2.
 > - HTTP/2 fallback also live still as HTTP/1.
 > - In many places today, HTTP/2 type requests can't be served.
 > - HTTPS/1 -> are not release publicly directly realease HTTP/1.1 version.  
-
+<br>
 
 #### HTTP/2 -
 - HTTP/2 is enhance version of HTTP/1.
@@ -248,5 +249,25 @@ All known as `softeares`.
 #### `Cache` : Store the data
 - `Cache` -> Temporary storage
 - E.g. In our facotry clients not came any client to buy product then, we create showroom that helful for client i.e. showroom is temporary storage means `Cache`.
+<br>
+
+### Summary of upcoming all time work -
+- `Browser/Client & Server` are also be a run on computer o& they are also be a S/W.
+1] Protocol setup - Brwoser can send request & server give response to browser  i.e. `setup of TCP connection`. & other also connection like UDP, text specialize connection, media specialize connection.
+2] Exchange TLS certificate - TLS certificate is our HTTPS.
+3] Send data to verb + URL + more info of headers - verb is get, post, delete that send to link means URL & more info of header like which is browser, whats our IP...
+4] Gets the response back - Server also a responsiblity with status code & data(Img, CSV, text).
+5] TCP connection is closed (stateless).
+<br>
+
+> NOTE :
+> - We can work as how to send request to server, how many type throgh send request, how access data. i.e. our `whole web or S/W`.
+> - This include databases that we can store also, cache, web sokets, WEBRTC, API, GRAPHQL.. i.e. our S/W development.
+> - `Cookie & Cache have not any similarities`, Cookie is like key value pair that can store our in backend.
+>   - `Cookie` E.g. Facebook use HTTPS it not include state. we login can't login every time facbook after we visit or reload i.e. that facbook know user have login using `cookie`.
+>   - In cookies having session information.
+>   - `Cache` E.g. In our facebook after login we shows 10 friend request, over all in facebook millions of users then every time we search that 10 friend request user from millions of user that finding is not easy. 1st time compute it from millions of user, but not possible serach from millions user for every reload or refresh.
+>   - That cache data temporary i.e. `Cache` things.
+<br>
 
 
