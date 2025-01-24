@@ -4,15 +4,15 @@ Web Dev Cohort by Hitesh C. &amp; Piyush G.
 <br>
 ## Working Timeline :
 
-`[5-1-25]`
-### 1] - GIT And Github Master Class - `< Bonus Class >`
-<br>
+`Bonus Classes`
+### 1] - GIT And Github Master Class - `< Bonus Class >` `[5-1-25]`
 
-`[15-1-25]`
-### 1] - Hello World
+-----
+
+### 1] - Hello World - `[11-1-25]`
+
+### 2] - Introduction to Web - `[12-1-25]`
 
 
 
-
-`[19-1-25]`
-### 4] - Starting with CSS & Flexbox
+### 4] - Starting with CSS & Flexbox - `[19-1-25]`
