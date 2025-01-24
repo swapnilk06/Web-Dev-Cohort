@@ -217,24 +217,36 @@ All known as `softeares`.
 - We are on browser side transmision means "data send to server" & on server side transmision means "data send to user".
 - Thats data transmision gives some rules. that for controling information, where to send information...
 
-#### `FTP` : Send information like mp3, mp4, csv, pdf...
+#### `FTP` : Send information like mp3, mp4, csv(excel file), pdf...
 
-#### 'IP' : Every computer gives name i.e. IP.
-- E.g. My computer name is 'Raju bhai' i.e. not proper naming in internet world when data transmission.
+#### `IP` : Every computer gives name i.e. IP.
+- E.g. My computer name is 'Raju bhai' i.e. not proper naming in internet world when ever data transmission.
 - Internet world our `machine gives name with internet protocol`.
 
-#### 'URL` : is only jargon word of 'Link'.
+#### `URL` : is only jargon word of 'Link'.
 - Locator -> Which track location
 - Resource -> Which is mp4 or mp3
 - Uniform -> It uniformaty to show same at every time
-- `URL` in further also called as `End point`.
+- `URL` in future we called as `End point`.
 
-#### 'DNS` : Its point URL to 'IP'.
+#### `DNS` : Its point URL to 'IP'.
 - E.g. `https://hiteshchoudhary.com/` our info on server i.e. also it provide by AWS or google or our home inhouse server.
 - That is only a `machine` we also store home server.
 - E.g. When we try to call from phone which can we inform you i.e. Contacts app.
-- `DNS is internet contact` is same work as contacts. bcz, contact also we can remove or delete or add.
-- 
+- `DNS is internet contacts` is same work as phone contacts. bcz, through contact also we can remove or add work.
 
+#### `Header` : Pass `Additional Information`
+- Header called information or mata data.
+- E.g. Card holder are made up with metal i.e. Additional inforamtion of card means `Header`.
+
+#### `Payload` : Actual data - Email, Password
+- E.g. In our browser we can login in linked In with filling email, password & click on login button. That login button whos click safari or chrome thats about info are going to header.
+- Whos browser click on login button that information `no any direcct use` that info called `Header`.
+- `Payload` -> But, payload is actual that use on sever majorly i.e. our `payload`.
+- E.g. We can load & pickup sofa's from factory & send to client. payload is sofa & driver, pickup are headers.
+
+#### `Cache` : Store the data
+- `Cache` -> Temporary storage
+- E.g. In our facotry clients not came any client to buy product then, we create showroom that helful for client i.e. showroom is temporary storage means `Cache`.
 
 
