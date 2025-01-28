@@ -12,12 +12,19 @@
   - E.g. JS gives brain functionality to provide our body, behaviour i.e. JS
 <br>
 
+
 #### Default CSS -
 - Default styling are depends on our browser which are set by default.
-  - E.g. Chrome default styling to text color is black.
-  - E.g. Chrome & safari browser show different "Click Me" button color or styling but color is same. i.e. that reason behind Chrome & Safari have different CSS or default Styling are different.
-- Browser have default styling. i.e. Chrome is different user agent & Safari is different user agent.
-- `Inspect mode` -> click on button element -> default button{_ _ _} called as `user agent stylesheet`.
+  - E.g. Chrome default styling as text color is black.
+- In our Tags have already present beautification i.e. reason p tag & button tag are different.
+- Button default beautification givrs by browser.
+  
+> NOTE : Chrome & safari browser show different "Click Me" button color or styling but color is same. i.e. that reason behind Chrome & Safari have different CSS or default Styling are different.
+
+- Browser have `default styling`. i.e. Chrome is different user agent & Safari is also different user agent.
+
+#### Steps to view default CSS -
+- `Inspect mode` -> click on elements -> default i.e. button{ _ _ _ } -> `user agent stylesheet`.
 - `Agent` : any one can request them or reder it i.e. agent.
 - We `can't change user agent stylesheet`. but we can do override that `user agent stylesheet`.
 - CSS -> means `only override of style` on top of it.
@@ -32,7 +39,7 @@
 - ``` CSS
   <button style="background-color: red;" >Click Me</button>
   ```
-- we can't remove browser CSS or not change browser CSS, we can only `cascade`.
+
 - In `Inspect mode` -> "element.style{_ _ _}" has taken background color as "red".
 - It only cascade only browser default property background-color as "buttonface" cascade with background color as "red".
 - They can't cascade whole properties all other property are same show as user agent can give i.e user agent chrome.
@@ -42,10 +49,13 @@
 > - `CSS` -> means `Properties: Values` E.g. bacground-color: red; i.e. property.
 > - In CSS `no any limit on creativity`. bcz, as creative as you want.
 <br>
+> - We can't remove browser CSS or not change browser CSS, we can only `cascade`.
+<br>
 
-### 3 types of using CSS -
 
-#### `Inline CSS` : add CSS on in element attribute.
+### 3 types of writing CSS -
+
+#### `Inline CSS` : add CSS on inside element attribute.
 ``` CSS
 <button style="background-color: red; color: white" >Click Me</button>
 ```
@@ -58,15 +68,12 @@
 <body>
       <p style="text-decoration: underline; background-color: blue; color: white;">This is a CSS Class</p>
       <button style="background-color: red; color: white;" >Click Me</button>
-      <!-- This click me button default CSS by browser -->
+      <!-- Above 'Click Me' have Default CSS give by browser -->
       <!-- style is attribute add in button -->
 </body>
 ```
+<br>
 
-23:00
-  
-- Internal
-- External
+#### `Internal CSS` : add CSS through style tag inside head.
 
-### -
 
