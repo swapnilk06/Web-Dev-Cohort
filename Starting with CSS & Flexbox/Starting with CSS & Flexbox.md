@@ -124,6 +124,110 @@ padding: 10px;
       
 </body>
 ```
+<br>
 
-31 min
+> [!NOTE]
+> Selector, {} -> paranthesis, key, property
+
+- Cascade style example
+``` CSS
+<head>
+<style>
+  button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    }
+
+  /* above border cascade with of below border */
+  button {
+    border: 2px solid grey;
+  }
+
+  button {
+    border: 2px solid red;
+  }
+</style>
+
+</head>
+<body>
+  <button>Click Me</button>
+  <!-- below style cascade as 1st property i.e. Inline CSS -->
+  <button style="border: 2px solid green">Click Me 2</button>
+```
+<br>
+
+#### Understand some termology -
+> [!NOTE]
+> - Tag -> H1, H2, P..
+> - `ID` -> Selector start with `#` dot
+>   - E.g. `#btn-1` 
+> - `Class` -> Selector start with `.` dot
+>   - E.g. `.my-class-a`
+<br>
+
+#### Tag, ID, Class -
+- `Tag` : Students is tag form class & multiple tags are also belong from same class.
+  - Tag -> used for easy for grouping. 
+  - E.g. Multiple "students" can belong to same class.
+- `Class` : Uniquly identify by Class.
+  - E.g. In class there have multiple students are also present.
+  - Single student can belong to multiple classes
+- `Id` : One element have one Id. i.e. that id not repeat.
+  - Same Id not assign for multiple students.
+  - E.g. Same id not assign other element on same page.
+<br>
+
+- E.g. Grouping of multiple elements using "class"
+```CSS
+<head>
+  <style>
+		/* We start selector with '.' dot i.e. its class */
+		.my-class-a {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	    <!-- Grouping of multiple elements using class  -->
+      <button>Click Me</button>
+      <button class="my-class-a" style="border: 2px solid green">Click Me 2</button>
+			<h1 class="my-class-a">Heading</h1>
+      <p class="my-class-a">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex perspiciatis laboriosam quidem, sequi incidunt debitis!</p>
+</body>
+```
+<br>
+
+- E.g. Single student can belong to "multiple classes"
+```CSS
+<head>
+  <style>
+		/* We start selector with '.' dot i.e. its class */
+		.my-class-a {
+			color: red;
+		}
+
+		.my-class-b {
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	    <!-- Grouping of multiple elements using class  -->
+      <button class="my-class-b">Click Me</button>
+      <button class="my-class-a" style="border: 2px solid green">Click Me 2</button>
+			<h1 class="my-class-a">Heading</h1>
+      <p class="my-class-a my-class-b">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex perspiciatis laboriosam quidem, sequi incidunt debitis.</p>
+</body>
+````
+
+- E.g. Uniquely identify using "Id"
+```CSS
+
+```
 
