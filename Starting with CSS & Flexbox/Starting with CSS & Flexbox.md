@@ -166,7 +166,7 @@ padding: 10px;
 
 #### Understand some termology -
 > [!NOTE]
-> - Tag -> H1, H2, P..
+> - `Tag` -> H1, H2, P..
 > - `ID` -> Selector start with `#` dot
 >   - E.g. `#btn-1` 
 > - `Class` -> Selector start with `.` dot
@@ -265,12 +265,16 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex perspiciatis labori
 > - Tag : All Students are tag. i.e. `Select all element through -> tag`.
 > - Class : Narrow down selection scope of or group of students through class. i.e. `From tag select some group through -> class`.
 > - Id : Narrow down selection scope of unique student through id. i.e. `From tag select specific or unique element through -> id`.
+<br>
 
-
-#### Q. What if add multiple id on same page?
+#### Q. What if add same id on multiple tag on same page?
+- Not give any error show by html, but that illegal thing.
+<br>
 
 > [!IMPORTANT]
 > In HTML they don't give any Error.
+<br>
+
 
 
 49 min
