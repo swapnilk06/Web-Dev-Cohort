@@ -1,6 +1,10 @@
 
 #### `19-1-25`
 
+> [!IMPORTANT]
+> HTML is not a programming language. Technically in HTML they don't give any Error.
+
+
 # Starting with CSS & Flexbox
 
 #### Just for analogy Diff. between HTML & CSS -
@@ -170,17 +174,10 @@ padding: 10px;
 <br>
 
 #### Tag, ID, Class -
+
 - `Tag` : Students is tag form class & multiple tags are also belong from same class.
   - Tag -> used for easy for grouping. 
   - E.g. Multiple "students" can belong to same class.
-- `Class` : Uniquly identify by Class.
-  - E.g. In class there have multiple students are also present.
-  - Single student can belong to multiple classes
-- `Id` : One element have one Id. i.e. that id not repeat.
-  - Same Id not assign for multiple students.
-  - E.g. Same id not assign other element on same page.
-<br>
-
 - E.g. Grouping of multiple elements using "class"
 ```CSS
 <head>
@@ -202,6 +199,9 @@ padding: 10px;
 ```
 <br>
 
+- `Class` : Uniquly identify by Class.
+  - E.g. In class there have multiple students are also present.
+  - Single student can belong to multiple classes
 - E.g. Single student can belong to "multiple classes"
 ```CSS
 <head>
@@ -225,9 +225,55 @@ padding: 10px;
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex perspiciatis laboriosam quidem, sequi incidunt debitis.</p>
 </body>
 ````
+<br>
 
+- `Id` : One element have one `unique Id`. i.e. that id not repeat.
+  - Same Id not assign for multiple students.
+  - E.g. Same id do not assign other element on same page.
 - E.g. Uniquely identify using "Id"
 ```CSS
 
+<head>
+  <style>
+	.my-class-a {
+	color: red;
+	}
+
+	.my-class-b {
+	font-size: 30px;
+	}
+
+	/* We start Id selector with '#' dot i.e. its Id */
+	#btn-1{
+	color: violet;
+	}
+ </style>
+</head>
+<body>
+<!-- Id - that same Id not gives multiple time on same page.
+id="btn-1" -> work only 1 time in single page but, not work mutiple time on single page -->
+      <button id="btn-1" class="my-class-b">Click Me</button>
+      <button class="my-class-a" style="border: 2px solid green">Click Me 2</button>
+       <h1 class="my-class-a">Heading</h1>
+      <p class="my-class-a my-class-b">
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex perspiciatis laboriosam quidem, sequi incidunt debitis. Commodi corrupti dolorem veniam accusantium eius neque dolore</p>
+</body>
 ```
+<br>
+
+> [!NOTE] - Real world example of Tag, Class, Id
+> - Tag : All Students are tag. i.e. `Select all element through -> tag`.
+> - Class : Narrow down selection scope of or group of students through class. i.e. `From tag select some group through -> class`.
+> - Id : Narrow down selection scope of unique student through id. i.e. `From tag select specific or unique element through -> id`.
+
+
+#### Q. What if add multiple id on same page?
+
+> [!IMPORTANT]
+> In HTML they don't give any Error.
+
+
+49 min
+
+
 
