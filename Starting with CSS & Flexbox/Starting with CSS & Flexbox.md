@@ -167,7 +167,7 @@ padding: 10px;
 #### Understand some termology -
 > [!NOTE]
 > - `Tag` -> H1, H2, P..
-> - `ID` -> Selector start with `#` dot
+> - `Id` -> Selector start with `#` dot
 >   - E.g. `#btn-1` 
 > - `Class` -> Selector start with `.` dot
 >   - E.g. `.my-class-a`
@@ -232,7 +232,6 @@ padding: 10px;
   - E.g. Same id do not assign other element on same page.
 - E.g. Uniquely identify using "Id"
 ```CSS
-
 <head>
   <style>
 	.my-class-a {
@@ -268,16 +267,91 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex perspiciatis labori
 <br>
 
 #### Q. What if add same id on multiple tag on same page?
-- Not give any error show by html, but that illegal thing.
+- Not give any error show by html, but that illegal thing(best example, in european  country side website).
 <br>
 
 > [!IMPORTANT]
-> In HTML they don't give any Error.
+> HTML not a programing langauge then, they don't give any Error.
+<br>
+
+#### Cascading priority 
+- `Id have priority` than other selectors tag & selector class.
+- Id override Id priority to `top to bottom` which one Id last or bottom. i.e. `Id override by last id` but not override class.
+- That weight decision or priority Id working with algorithm i.e. `Specificity Algorithm - high specificity then high weighted`.
+- E.g. Cascading more specificity
+	- World all developers - that specificity for only developer
+	- Indias all developers - specificity for india's developer
+ 	- This Cohort developer
+ 	- Cohort developer india's developers
+	- Anirudh from this cohort - More specificity then anirudh have more weighted. i.e. Inline CSS
+```CSS
+<head>
+<style>
+	button {
+	color: red;
+	}
+
+	#btn-1 {
+	color: rgb(166, 255, 0);
+	}
+
+	/* Cascading priority Id wise in top to bottom way */
+	#btn-1 {
+	color: chocolate;
+	}
+
+	/* class do not override to Id */
+	.btn {
+	color: blue;
+	}
+</style>
+</head>
+<body>
+	<!-- In line CSS on direct element is more specificity i.e. no one override this -->
+	<button style="color: blueviolet; text-decoration: overline;" id="btn-1" class="btn">Click Me</button>
+</body>
+</html>
+```
+<br>
+
+> [!NOTE]
+> Inline CSS more priority or specificity.
+> Inline CSS on element `no one can override this`.
 <br>
 
 
+#### Specificity in between  Tag, Class, Id, Inline
 
-49 min
+> [!IMPORTANT]
+> - `Inline CSS` -> 1st priority
+> - `Id` -> 2nd priority
+> - `Class` -> 3rd priority
+> - `Tag` -> Last priority
+<br>
+
+#### `External CSS` : seprate filed CSS
+- External CSS style apply through importing i.e use of `link tag`.
+- Multiple CSS style also can apply.
+- `rel` - at link time many links are present for link, the browser has to be told that which type of file link. i.e. CSS, favicon, manifest file...
+- `rel="stylesheet"` -> that is css type file for appling.
+ 
+- E.g.
+```CSS
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+```
+<br>
+
+## Flexbox 
+
+1:07 min
+
+
+
+
+
+
 
 
 
