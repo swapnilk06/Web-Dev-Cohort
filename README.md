@@ -16,3 +16,6 @@ Web Dev Cohort by Hitesh C. &amp; Piyush G.
 
 
 ### 4] - Starting with CSS & Flexbox - `[19-1-25]`
+
+
+### 7] - A fresh Introduction to Javascript - `[1-2-25]`
