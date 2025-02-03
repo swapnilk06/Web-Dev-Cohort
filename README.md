@@ -19,3 +19,5 @@ Web Dev Cohort by Hitesh C. &amp; Piyush G.
 
 
 ### 7] - A fresh Introduction to Javascript - `[1-2-25]`
+
+### 8] - A Javascript conditionals and loops - `[1-2-25]`
