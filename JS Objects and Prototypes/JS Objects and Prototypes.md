@@ -20,10 +20,13 @@
 - Methods means `Actions or Functions`. 
 <br>
 
+![image](https://github.com/user-attachments/assets/96b82f28-e977-4e4f-8240-8aff18684a18)
+
+<br>
 
 #### Difference in Methods & Functions 
 - Actually there is no difference between them.
 - But, function is standalone -> that called function.
-- Function is a part of object -> that called Method (in context of Object).
+- Function is a part of object -> that called Method (Method say, context of Object).
 
 > [!IMPORTANT]
