@@ -59,6 +59,42 @@
 
 #### Reason for JS is weired
 - JS is build for different purpose, JS make became simple DOM manipulation, but they made fullstack application.
+- that reasons JS updated but its make weired.
+<br>
+
+#### In JS Object create 2 tpyes
+- Make a simple Object in JS using - `Object Literals`
+```JS
+const obj = {
+  // That object store key:value pairs - properties, methods
+}
+```
+- `Object Literals` - in that makes pairs of key:values.
+-  but, `they have problem` is we can create 2 objects of same type we write all key by self every object.
+- E.g.
+- We have `person1` object have many properties & also `person2` also write all same keys in here.
+```JS
+person1 = {fname, lname, 20+, age}
+person2 = {fname, lname, 20+, age}
+```
+- What will all objects have the same structure? that have chances of bugs that
+  - we missout samething,
+  - spelling mistake,
+  - we missed key writing...
+- All objects have not same template.
+- All objects have not common parent.
+- We console.log everything key of every object for checking structure same or not?
+
+> [!NOTE]
+> - Deep Copy have solved that?
+> - No, Deep Copy have copy values, we can't required copy becz, `person1` is different object than `person2`.
+
+- We make same structure but values are differents.
+- That `Object Literals` have a problem in objects they do not same structure or they have not wrk as template.
+
+<br>
+- Thats of came `Es6 Classes` support.
+- `Es6` cames with classes support.
 
 
 
