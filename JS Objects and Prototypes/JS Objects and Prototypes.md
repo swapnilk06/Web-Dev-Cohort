@@ -3,98 +3,128 @@
 # JS Objects and Prototypes
 
 > [!TIP]
-> - We learn that - Objects, Object oriented programming, Classes
+> - We learn that - Objects, Object Oriented Programming, Classes
 > - Why is it said, in javascript everything is `Object`?
 <br>
 
 ## Objects 
 
-#### What is objects? (in every language)
-- Objects means, that `represent real world entities`.
+#### What is objects?
+- Objects means, that `represent real world entities`(in every language).
 - Every thing is entity that have some property.
   - E.g. Pencil is entity becz, those have color, price... that have own properties & functionality.
-- `Object` - Objects is an entity, which has properties & some functionality.
-- #### Functionality in Object Oriented Way -> `Methods`.
-- Properties means `Attributes`.
+- Object - `Objects is an entity, which has properties & some functionality`.
+- Functionality in Object Oriented Way called as -> `Methods`.
+  - Methods are Actions or Functions. 
+- Properties means -> `Attributes`.
   - Attributes are color, weight,..
-- Methods means `Actions or Functions`. 
 
 ![image](https://github.com/user-attachments/assets/96b82f28-e977-4e4f-8240-8aff18684a18)
 
 <br>
 
-#### Difference in Methods & Functions 
-- Actually there is no difference between Methods & Functions.
+#### What is difference in between Methods & between Functions
+- Actually there is **no difference** between Methods & Functions.
 - But, `function is standalone` -> that called `Function`.
-- A `function is a part of object` -> that called `Method` (Method is basically called in the context of object).
+- A `function is a part of object` -> that called `Method` (_Method is basically called in the form of object context_).
 <br>
-
 
 > [!IMPORTANT]
-> In every language Object implement or defination writting is different.
+> - We use `method` word in anywhere i.e. means -> **`method` its a function** that is -> **function is part of object**.
+> - But we called as `function` word i.e. means -> its a standalone is the function of our code.
+> - In every language have different way of creating object.(_netmeet(overall or in nutshell) is object defination is same, but every language implementation is different_).
+> - In JS `{}` for object creation i.e. = {}
+> - And also `class` names keyword in JS.
 <br>
 
 
-#### JS Context
-- In Javascript context problem is, early JS is very unplanned language but, its very powerful language.
+### JS Context
+- In Javascript context problem is, **early days JS is very unplanned language** but, **JS very powerful language**.
 
 #### Why JS is very unplanned language? but its very powerful language.
-- JS history is different than other language. Any language build for some purpose. e.g. -
-  - Java make for cross platform working,
+- JS history is different than other languages.
+- Any language build for some purpose. e.g. -
+  - Java builds for cross platform working,
   - C & C++ for low level language,
   - Rust for memory efficient,
-- `Javascript build for` -> to add intractivity to the browser.
+- `Javascript build for` -> to add intractivity on a browser.
+  - e.g. JS work as button on click what action, whats cames... that is very simple purpose of JS. 
 - JS only & only meant that `run only in the browser`.
-- Overtime after coming `NodeJS` they are 2 things -
-  - Javascript as standalone programing language when working & JS became standalone language.
-    - e.g. In JS we also create Servers, also make watch OS, we also build react native, mobile apps,.. we also make videos editor app that run on JS.
-    - At the end JS is make very powerful language. i.e. JS usecase become very powerful.
 <br>
 
-### Was it really JS made keeping this purpose in mind, that one day it would become so powerful?
-- In under JS concepts are slightly become weired.
-- Old things as well as new things but with upgrade those old things they can removed? -> NO.
-- becz, old websites are not working after, that resons in JS slightly weired.
+#### Overtime after `NodeJS` coming they are 2 things in that -
+- Javascript `work as standalone programing language` & J**S became a standalone language**.
+    - e.g. In JS we create Servers, also make watch OS, we also build react native apps, mobile apps,..
+    - e.g. In today we create whole SaaS on browser,  we make videos editor app that run on browser.
+- At the end JS is make very powerful language. i.e. JS usecase become very powerful.
+<br>
+
+#### Was it really JS made keeping this purpose in mind, that one day it would become so powerful?
+- **NO**.
+- In the JS **concepts are slightly become weired**.
+- In JS also old things with new things, JS also update with upgrade but, those old things they can possible to removed? -> **NO**.
+- becz, we try to removed old things then old websites are not possible to run, thats reasons in `JS slightly became weired`.
+- Also reason in JS for weired -> we do one thing in JS, that have 10 things are available in JS (**Backword Compability**).  
 <br>
 
 #### Reason for JS is weired
-- JS is build for different purpose, JS make became simple DOM manipulation, but they made fullstack application.
-- that reasons JS updated but its make weired.
+- JS is build for different purpose, but JS made for some other purpose.
+- e.g. JS build for simple DOM manipulation language, but JS made fullstack application lamgauge.
+- that reasons JS can update but its became `weired`.
 <br>
 
-#### In JS Object create 2 tpyes
-- Make a simple Object in JS using - `Object Literals`
+
+### Create `Objects` in JS
+- In JS Object create 2 ways 
+  -  `Object Literals` - in that makes pairs of key:values.
+  -
+  
+#### Object Literals
+- Make a simple Object in JS using -> `Object Literals`(**that store key:value pairs**)
 ```JS
 const obj = {
-  // That object store key:value pairs - properties, methods
+  // That object store key:value pairs i.e. properties, methods
 }
 ```
-- `Object Literals` - in that makes pairs of key:values.
--  but, `they have problem` is we can create 2 objects of same type we write all key by self every object.
-- E.g.
-- We have `person1` object have many properties & also `person2` also write all same keys in here.
+- Initially JS build that only requirement. i.e. for make collection, for create group of related properties. i.e. -> **Object**.
+- but, **that way object creation having a problem in particular implementation**
+- Problem is we can create 2 objects of same type, we need to write all key by self every object.
+- e.g. Let say we have write **person1** object have many properties like fname, lname,.. & we create **person2** also write all same keys in here.
 ```JS
+// JS Object Literals 
 person1 = {fname, lname, 20+, age}
 person2 = {fname, lname, 20+, age}
 ```
-- What will all objects have the same structure? that have chances of bugs that
-  - we missout samething,
-  - spelling mistake,
-  - we missed key writing...
-- All objects have not same template.
-- All objects have not common parent.
-- We console.log everything key of every object for checking structure same or not?
+
+#### What will all objects have the same structure? 
+- **NO**
+- **that have chances of bugs** i.e. we missout something, spelling mistake, we missed writing key...
+- 1] **All objects have not same template**.
+- 2] **All objects have not any common parent**.
+- We **console.log** every key of every object for checking structure same or not?
+- Not available any hard & fast thing for check that 2 objects are same.
 
 > [!NOTE]
-> - Deep Copy have solved that?
-> - No, Deep Copy have copy values, we can't required copy becz, `person1` is different object than `person2`.
+> - **Deep Copy** have solved that problem?
+> - **No**, Deep Copy **have copy the values**, we can't required copy becz, `person1` is different object than `person2`.
+> - That have same keys only, **we make same structure(schema) but, make values are different**.
 
-- We make same structure but values are differents.
-- That `Object Literals` have a problem in objects they do not same structure or they have not wrk as template.
-
+> [!IMPORTANT]
+- In that `Object Literals` have a problem is objects have not same structure or they have not work as a template.
 <br>
-- Thats of came `Es6 Classes` support.
-- `Es6` cames with classes support.
+
+#### JS comeback with Es6 support
+- Solve thats of **object literals problem** they comeback with `Es6(**Ecmma Script Standards**) Classes` support.
+- In `Es6 support` need to cames with `classes support`.
+- In the class we define what type of structure(schema) we required.
+```JS
+class Person() {
+  ...schema  // define structure or schema in class
+}
+```
+
+
+
 
 
 
