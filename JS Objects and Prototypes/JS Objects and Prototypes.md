@@ -114,17 +114,77 @@ person2 = {fname, lname, 20+, age}
 <br>
 
 #### JS comeback with Es6 support
-- Solve thats of **object literals problem** they comeback with `Es6(**Ecmma Script Standards**) Classes` support.
-- In `Es6 support` need to cames with `classes support`.
+- Solve thats of **object literals problem** they comeback with `Es6(Ecmma Script Standards) Classes` support.
+- Es6 support they need to cames with `classes support`.
 - In the class we define what type of structure(schema) we required.
 ```JS
+// define Blueprint or schema
 class Person() {
-  ...schema  // define structure or schema in class
+  ...schema   // define structure or schema in class
 }
 ```
+- We can create multiple `objects`.
+```JS
+// Multiple objects
+  const p1 = new Person() // schema of class Person also present in that
+  const p2 = new Person() // schema of class Person also present in that
+```
+- As its a schema of persons are present in p1 & p2.
+- Any **new keys** adds in schema or blueprint i.e. that are also available in all objects.
+```JS
+// define Blueprint or schema
+class Person() {
+  ...schema     // define structure or schema in class
+  ... New Keys 
+}
+
+// Multiple objects
+  const p1 = new Person() // schema of class Person also present in that
+  const p2 = new Person() // schema of class Person also present in that
+
+```
+- That ways its create a `single parent`.
+
+#### What work of `new` keyword?
+- When we think about object, what we can use `Heap memory` or `Stack memory`?
+- We use `Heap memory` for objects.
+- `new` keyword says, we go `Heap meomory` and allocate new memory & `return it's address` (return to new).
+- `new` keyword **required new memory location**.
+- `p1` variable holds in the **stack memory**.
+- `p1 value is address` i.e. stored in Heap memory.
+- Similarly in `p2` variable have different address.
+- p1 & p2 `have not any relation between them`.
+- p1 & p2 `have different different address`.
+
+![image](https://github.com/user-attachments/assets/28b82c99-0a69-4a85-890d-41cbf958db6f)
+
+<br>
+
+> [!NOTE]
+> - `new keyword` functionality also same in java.
 
 
+```JS
 
+// create Object & access values
+
+const obj1 = {
+	fname: 'Piyush',
+	lname: 'Garg',
+};
+
+const obj2 = {
+	fname: 'Anirudh',
+	lname: 'Jwala',
+};
+
+// Independent object - different memory location of obj1 & obj2
+console.log(obj1); 
+console.log(obj2);
+
+// O/p in terminal - { fname: 'Piyush', lname: 'Garg' }
+
+```
 
 
 
