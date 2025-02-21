@@ -163,6 +163,19 @@ class Person() {
 > [!NOTE]
 > - `new keyword` functionality also same in java.
 
+```JS
+// create Object
+
+const obj1 = {
+	fname: 'Piyush',
+	lname: 'Garg',
+};
+
+console.log(obj1); // { fname: 'Piyush', lname: 'Garg' }
+
+```
+
+<br>
 
 ```JS
 
@@ -182,9 +195,93 @@ const obj2 = {
 console.log(obj1); 
 console.log(obj2);
 
-// O/p in terminal - { fname: 'Piyush', lname: 'Garg' }
+// O/p on terminal -
+// { fname: 'Piyush', lname: 'Garg' }
+// { fname: 'Anirudh', lname: 'Jwala' }
 
 ```
+
+<br>
+
+``` JS
+
+// create two Objects - obj1 values not access in obj2
+
+const obj1 = {
+	fname: 'Piyush',
+	lname: 'Garg',
+	getFullname: function () {
+		return `${this.fname} ${this.lname}`;
+	}
+};
+
+const obj2 = {
+	fname: 'Anirudh',
+	lname: 'Jwala',
+};
+
+// Independent object - different memory location of obj1 & obj2
+console.log(obj1.getFullname()); 
+
+console.log(obj2.getFullname()); // not access obj1 getFullname() in obj2
+// TypeError: obj2.getFullname is not a function
+
+```
+
+<br>
+
+#### DRY principle violat in the code
+- Do not repeat functionality in code.
+  - e.g. Bugs in obj1 then we also change in the obj2.
+- We find any bugs in single object or updation code in single object then we required same code in all over objects.
+- Thats way ddebugging is very difficult.  
+
+``` JS
+
+// Coding principle violat - DRY(Do Not Repeat yourslf) principle violat 
+
+const obj1 = {
+	fname: 'Piyush',
+	lname: 'Garg',
+	getFullname: function () {
+		return `${this.fname} ${this.lname}`;
+		// that violat coding principle 
+		// write similar schema in obj2 also
+	}
+};
+
+const obj2 = {
+	fname: 'Anirudh',
+	lname: 'Jwala',
+	getFullname: function () {
+		return `${this.fname} ${this.lname}`;
+		// that violat coding principle 
+		// write similar schema in obj1 also
+	}
+};
+
+// DRY - Do not repeat yourself
+
+console.log(obj1.getFullname()); 
+console.log(obj2.getFullname());
+
+// O/p in terminal -
+// Piyush Garg
+// Anirudh Jwala
+
+````
+
+<br>
+
+#### class (without violat DRY principle)
+- In new modern JS create -> `class`
+- We create person class that return fname & lname.
+- On that object basis we can create fname & lname `property` are on user scale site(using `this`).
+- 
+	
+
+
+
 
 
 
