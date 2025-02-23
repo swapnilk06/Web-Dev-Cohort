@@ -24,3 +24,6 @@ Web Dev Cohort by Hitesh C. &amp; Piyush G.
 
 
 ### 11] - JS Objects and Prototypes - `[15-2-25]`
+
+
+### 13] - JS Foundation (JS Foundation, Project and Machine Coding course) - `[22-2-25]` 
