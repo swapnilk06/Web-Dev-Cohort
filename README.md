@@ -27,3 +27,6 @@ Web Dev Cohort by Hitesh C. &amp; Piyush G.
 
 
 ### 13] - JS Foundation (JS Foundation, Project and Machine Coding course) - `[22-2-25]` 
+
+
+### 14] - Iteration, functions and Concepts (JS Foundation, Project and Machine Coding course) - `[23-2-25]` 
