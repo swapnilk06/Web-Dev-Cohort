@@ -22,8 +22,9 @@
 
 
 <br>
-> [!TIP]
-> - 
+> [!NOTE]
+> - function root structure or defination or syntax boilerplate can never change.
+>   - E.g. `function greet(){}`
 
 <br>
 
