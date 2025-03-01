@@ -32,3 +32,7 @@ Web Dev Cohort by Hitesh C. &amp; Piyush G.
 
 
 ### 14] - Iteration, functions and Concepts (JS Foundation, Project and Machine Coding course) - `[23-2-25]` 
+
+
+### 18] - Lexical Scoping and Closure Functions (JS - Foundation & Project & Machine Coding course) - `01-3-25`
+
