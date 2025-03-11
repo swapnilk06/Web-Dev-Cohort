@@ -37,6 +37,21 @@ body {
 #### Resources - [Date JS mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 - JavaScript Date objects are used to work with dates and times.
 
-#### What can I do with that?
-- getTime() and setTime() methods
-- Local time (& there methods) and UTC time
+<br> 
+
+### Code working -
+
+
+#### What is used of "setInterval"?
+- "setInterval" => that call fun for every single seconds that keep on running.
+- fun is called every 1000 milliseconds (or 1 second), ensuring that the clock display is updated in real-time.
+```JS
+setInterval(updateClock, 1000);
+```
+
+In JavaScript, `document.getElementById("id")` is a method that selects an HTML element by its `id` attribute.
+```JS
+document.getElementById("time")
+document.getElementById("date")
+}
+```
