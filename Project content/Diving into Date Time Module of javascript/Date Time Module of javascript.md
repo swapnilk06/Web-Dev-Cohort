@@ -4,11 +4,16 @@
 
 ### How doing that?
 - [x] Build a simple timer.
-- [x] What are the precaution we have take? What are the edge cases? How we can actually study that?
-
+- [x] What are the precaution we have take? What are the edge cases?
+- [x] How we can actually study that?
 
 <br>
 
+- [x] Help to build application - 
+	- [x] Hotel booking system
+	- [x] Hospital management system
+
+<br>
 
 ```CSS
 
@@ -34,15 +39,32 @@ body {
 }
 ```
 
-#### Resources - [Date JS mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
-- JavaScript Date objects are used to work with dates and times.
+#### Resources - [Date JS MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+- JavaScript `Date objects` are used to work with dates and times.
+- An `epoch` of midnight at the beginning of 1 January 1970 UTC, and an accounting of every day as comprising exactly 86,400 seconds (each of which is 1000 milliseconds long).
+- There are various methods that allow to interact with the timestamp stored in the date.
+- There are two groups of `Date methods`: one group gets and sets various date components by interpreting the timestamp as a local time, while the other uses UTC.
 
 <br> 
 
-### Code working -
+### Display the time & display the date -
 
+#### Write function which can update a clock (clock needs to update every second)
 
-#### What is used of "setInterval"?
+function that responsible for updating a clock every single second
+```JS
+// fun for updating clock for every single second
+function updateClock() {
+	//
+}
+```
+
+> [!important]
+> - Most IMP part is that who's going to called this function every single second. (go for the setInterval) 
+
+<br>
+
+What is used of "setInterval"?
 - "setInterval" => that call fun for every single seconds that keep on running.
 - fun is called every 1000 milliseconds (or 1 second), ensuring that the clock display is updated in real-time.
 ```JS
@@ -55,6 +77,7 @@ document.getElementById("time")
 document.getElementById("date")
 }
 ```
+<br>
 
 #### What happen use of new keyword & don't used new keyword?
 
@@ -98,7 +121,10 @@ console.log(typeof now); // "string"
 
 <br>
 
-#### Use `new Date()` when you need to work with dates (e.g., extract year, compare dates, modify dates).
+> [!NOTE]
+> Use `new Date()` when you need to work with dates (e.g., extract year, compare dates, modify dates).
+
+<br>
 
 
 
