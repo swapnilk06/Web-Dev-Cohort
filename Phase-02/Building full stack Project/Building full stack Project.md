@@ -9,29 +9,31 @@
 - [x] 
 
 ### Motivational **Topics**/**Things**/**Projects** :
-- [x] **Topics**
-  - [x]  New killer database -> [Spacetimedb](https://spacetimedb.com/) - They want to make a game, but made a DB.
+**Topics** :
+  - [x] New killer database -> [Spacetimedb](https://spacetimedb.com/) - They want to make a game, but made a **DB**.
   
-- [x] **Projects**
+**Projects** :
   - [x] Kanban Project (student driven class)
 
-- [x] **Things**
+**Things** :
+  - [x] Building full stack Project (student driven class)
+
+<br>
+
+---------------
+
 
 <br>
 
 > [!IMPORTANT]
-> 
-<br>
-
-
-## Lexical Scoping & Closures
-
+> -
 
 <br>
 
 
 
+-----------------
 
 > [!TIP]
 > - 
-> - 
+
