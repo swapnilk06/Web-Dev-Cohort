@@ -64,37 +64,98 @@ function updateClock() {
 
 <br>
 
-What is used of "setInterval"?
-- "setInterval" => that call fun for every single seconds that keep on running.
-- fun is called every 1000 milliseconds (or 1 second), ensuring that the clock display is updated in real-time.
+#### 1] - function for updating clock for every single second
+
 ```JS
-setInterval(updateClock, 1000);
+function updateClock() {
+	//
+}
+setInterval(updateClock, 1000); // that call every single second function
 ```
 
-In JavaScript, `document.getElementById("id")` is a method that selects an HTML element by its `id` attribute.
+> [!NOTE]
+> - What about 0 second // 0 1 2 3...?
+> 	- Manually call method `updateClock()` & execute that.
+> 	- `updateClock()` is a reference of fun that is passed on this an **execution of function** in `setInterval(updateClock, 1000)`
+
 ```JS
-document.getElementById("time")
-document.getElementById("date")
+function updateClock() {
+	//
+}
+setInterval(updateClock, 1000); 
+updateClock() // call the manually 
+```
+
+
+> [!NOTE]
+> - What is used of "setInterval"?
+>	- "setInterval" => that call fun for every single seconds that keep on running.
+>	- fun is called every 1000 milliseconds (or 1 second), ensuring that the clock display is updated in real-time.
+
+> [!important]
+> - Interview perspective :
+> - It means that both setInterval() and setTimeout() use the same ID system. So, if you start a timer using setTimeout(), you can stop it using clearInterval(), and if you start a repeating timer with setInterval(), you can stop it using clearTimeout().
+> 	- Even though clearTimeout() is usually used for setTimeout() and clearInterval() for setInterval(), they actually work the same way in stopping timers
+> 	- Both `setInterval()` and `setTimeout()` use the same ID system. So, if you start a timer using `setTimeout()`, you can stop it using `clearInterval()`, and if you start a repeating timer with `setInterval()`, you can stop it using `clearTimeout()`.
+> 	- Even though `clearTimeout() is usually used for setTimeout()` and `clearInterval() for setInterval()`, they actually work the same way in stopping timers.
+
+<br>
+
+#### 2] - get a reference element
+
+- In JavaScript, `document.getElementById("id")` is a method that selects an HTML element by its `id` attribute.
+
+```JS
+function updateClock() {
+	// grab the reference
+	const timeElement = document.getElementById("time")
+	const dateElement = document.getElementById("date")
+}
+setInterval(updateClock, 1000);
+
+updateClock()
 }
 ```
 <br>
 
-#### What happen use of new keyword & don't used new keyword?
+#### 3] - get a the date
 
-Using **new** keyword
+```JS
+function updateClock() {
+	const timeElement = document.getElementById("time")
+	const dateElement = document.getElementById("date")
+
+// grab the date 1st
+const now = new Date();
+consle.log(now); // inspet -> console
+
+}
+setInterval(updateClock, 1000);
+
+updateClock()
+}
+```
+
+> [!NOTE]
+> - What happen use of **new keyword** & **don't used new keyword**?
+
+#### Using **new** keyword
+- When you use the new keyword with Date(), it creates a new Date object that represents the current date and time.
+  
 ```JS
 const now = new Date(); // Creates a Date Object
 ```
-- When you use the new keyword with Date(), it creates a new Date object that represents the current date and time.
+- `new Date()` creates an instance of the Date object.
+- It stores the full date and time information.
+- The **now variable is an object**, `not a string`.
+
 ```JS
 const now = new Date();
 console.log(now);  
 console.log(typeof now); // "object"
 ```
-- `new Date()` creates an instance of the Date object.
-- It stores the full date and time information.
-- The now variable is an object, not a string.
-- Other methods examples -
+
+- Methods examples -
 ```JS
 // Thu Mar 11 2025 23:17:50
 console.log(now.getFullYear()); // 2025
@@ -103,9 +164,8 @@ console.log(now.getDate());     // 11
 console.log(now.getHours());    // Current hour
 ```
 
-<br>
+#### Without using new keyword
 
-Without using new keyword
 ```JS
 const now = Date(); // Returns a String
 ```
@@ -119,12 +179,53 @@ console.log(typeof now); // "string"
 - It is equivalent to calling new Date().toString().
 - You cannot use Date object methods like getFullYear(), getMonth(), etc., because it's just a string.
 
-<br>
-
 > [!NOTE]
-> Use `new Date()` when you need to work with dates (e.g., extract year, compare dates, modify dates).
+> - Use `new Date()` when you need to work with dates (e.g., extract year, compare dates, modify dates).
 
 <br>
 
+#### 4] - get a the hour
 
+- Problem when time is exactly 12
+```JS
+function updateClock() {
+	const timeElement = document.getElementById("time")
+	const dateElement = document.getElementById("date")
+
+	const now = new Date();
+    const hours = now.getHours() % 12; // get problem 
+	consle.log(hours); 
+
+}
+setInterval(updateClock, 1000);
+
+updateClock()
+}
+```
+
+- Soution : for problem when time is exactly 12
+  
+> [!NOTE]
+> - Why `||` OR condition used?
+> 	- When `now.getHours() % 12` get false then other value is true i.e. 12.
+>  	- 12 % 12 => 0 i.e. false
+
+```JS
+
+function updateClock() {
+	const timeElement = document.getElementById("time")
+	const dateElement = document.getElementById("date")
+
+	const now = new Date();
+    const hours = now.getHours() % 12 || 12; //  Use `||` OR condition with adding 12.
+	consle.log(hours);
+
+}
+setInterval(updateClock, 1000);
+
+updateClock()
+}
+```
+
+#### 4] - get a the minute
 
