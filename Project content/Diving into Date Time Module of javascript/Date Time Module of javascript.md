@@ -39,6 +39,10 @@ body {
 }
 ```
 
+<br>
+
+----------
+
 #### Resources - [Date JS MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 - JavaScript `Date objects` are used to work with dates and times.
 - An `epoch` of midnight at the beginning of 1 January 1970 UTC, and an accounting of every day as comprising exactly 86,400 seconds (each of which is 1000 milliseconds long).
@@ -193,7 +197,7 @@ function updateClock() {
 	const dateElement = document.getElementById("date")
 
 	const now = new Date();
-    const hours = now.getHours() % 12; // get problem 
+	const hours = now.getHours() % 12; // get problem 
 	consle.log(hours); 
 
 }
@@ -217,7 +221,9 @@ function updateClock() {
 	const dateElement = document.getElementById("date")
 
 	const now = new Date();
-    const hours = now.getHours() % 12 || 12; //  Use `||` OR condition with adding 12.
+
+    // grab the hour
+	const hours = now.getHours() % 12 || 12; //  Use `||` OR condition with adding '12'.
 	consle.log(hours);
 
 }
@@ -227,5 +233,206 @@ updateClock()
 }
 ```
 
-#### 4] - get a the minute
+<br>
+
+#### 5] - get a the minute & second
+
+- Problem to convert minutes into 2 digits
+```JS
+function updateClock() {
+	const timeElement = document.getElementById("time")
+	const dateElement = document.getElementById("date")
+
+	const now = new Date();
+	const hours = now.getHours() % 12 || 12;
+	const minutes = now.getMinutes(); // Problem is how to convert in 2 dgits?
+	consle.log(minutes); 
+
+}
+setInterval(updateClock, 1000);
+
+updateClock()
+}
+```
+
+- Soution : problem to convert minutes into 2 digits
+	- convert into to string.
+	- add pading to start whenever, digit in single character. i.e. 1 => 01
+ 	- not add any pading whenever, are 2 digits. i.e. 11 => 11
+
+- solution for minute & second
+```JS
+function updateClock() {
+	const timeElement = document.getElementById("time")
+	const dateElement = document.getElementById("date")
+
+	const now = new Date();
+	const hours = now.getHours() % 12 || 12;
+
+    // grab the minute
+    const minutes = now.getMinutes().toString().padStart(2, '0'); // padstart for whenever, single digit
+
+	// grab the second
+	const seconds = now.getSeconds().toString().padStart(2, '0'); // padstart for whenever, single digit
+
+	console.log(seconds); 
+
+}
+setInterval(updateClock, 1000);
+
+updateClock()
+}
+```
+
+<br>
+
+> [!important]
+> - grab hours, minutes & seconds also possible through switch case but, its very bad approach.
+
+<br>
+
+
+#### 6] - take care of AM/PM
+
+```JS
+function updateClock() {
+	const timeElement = document.getElementById("time")
+	const dateElement = document.getElementById("date")
+
+	const now = new Date();
+	const hours = now.getHours() % 12 || 12;
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+	const seconds = now.getSeconds().toString().padStart(2, '0');
+
+    // care of AM/PM
+	const ampm = now.getHours() >= 12 ? "PM" : "AM";
+	console.log(ampm);
+
+}
+setInterval(updateClock, 1000);
+
+updateClock()
+}
+```
+
+<br>
+
+#### 7] - get date as well
+- `toLocaleDateString()`, `toLocaleTimeString()`, and `toLocaleString()` use locale-specific date and time formats.
+
+#### Why there `undefined` is here?
+- `undefined`: Passing undefined for the locales parameter means it defaults to the user's system locale (the default locale of the runtime environment).
+- `options`: The options parameter is an object that specifies how the date should be formatted. It may include properties like weekday, year, month, and day...
+
+```JS
+function updateClock() {
+	const timeElement = document.getElementById("time")
+	const dateElement = document.getElementById("date")
+
+	const now = new Date();
+	const hours = now.getHours() % 12 || 12;
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+	const seconds = now.getSeconds().toString().padStart(2, '0');
+	const ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+	// get date as well
+
+	const options = {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	};
+
+	const datestring = now.toLocaleDateString(undefined, options); // use locale-specific date and time formats
+
+}
+setInterval(updateClock, 1000);
+
+updateClock()
+}
+```
+
+<br>
+
+
+#### 8] - update time element & date element 
+```JS
+function updateClock() {
+	const timeElement = document.getElementById("time")
+	const dateElement = document.getElementById("date")
+
+	const now = new Date();
+	const hours = now.getHours() % 12 || 12;
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+	const seconds = now.getSeconds().toString().padStart(2, '0');
+	const ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+	const options = {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	};
+
+	const datestring = now.toLocaleDateString(undefined, options);
+
+	// update time element & date element
+	
+	timeElement.textContent = `${hours}:${minutes}:${seconds} ${ampm}`; 
+
+	// dateElement.textContent = `${datestring}`;
+    // OR
+	dateElement.textContent = datestring;
+
+}
+setInterval(updateClock, 1000);
+
+updateClock()
+}
+```
+
+<br> 
+
+
+### Completed : Time & Date module in javascript
+
+```JS
+function updateClock() {
+	const timeElement = document.getElementById("time")
+	const dateElement = document.getElementById("date")
+
+	const now = new Date();
+	const hours = now.getHours() % 12 || 12;
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+	const seconds = now.getSeconds().toString().padStart(2, '0');
+	const ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+	const options = {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	};
+
+	const datestring = now.toLocaleDateString(undefined, options);
+
+	timeElement.textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+
+	dateElement.textContent = datestring;
+
+}
+setInterval(updateClock, 1000);
+
+updateClock()
+}
+```
+
+<br>
+
+-------
+
+### Extra Work 
+- [x] Explore mdn as practically
+ 
 
