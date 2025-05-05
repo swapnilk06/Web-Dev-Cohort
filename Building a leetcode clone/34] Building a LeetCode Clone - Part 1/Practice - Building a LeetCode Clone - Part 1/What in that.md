@@ -1,4 +1,7 @@
-#### Revision Timeline - [54 min]
+#### Revision Timeline - [1:0:0 min]
+
+
+# Chapter-0
 
 ## What in that chapter-0?
 - Intro
@@ -9,7 +12,6 @@
 - Move to actual project setup
 
 <br>
-
 
 ## We build - Leetlab (product inspired by leetcode)
 
@@ -34,18 +36,15 @@
 
 
 ### In Backend side
-Whats are in that API Routes?
+- Whats are in that API Routes?
+- Inside API Route we are handle -
+	- Authentication
+	- Problem Management(Proper & CRUD operation related to problem)
+	- Code Execution
+	- Submission
+	- Playlist
 
-#### Inside API Route we are handle -
-- Authentication
-- Problem Management(Proper & CRUD operation related to problem)
-- Code Execution
-- Submission
-- Playlist
-
-<br>
-
-#### How our platform work?
+### How our platform work?
 - User/Admin
   - Admin
 		- Admin can create the problems (testcases, codesnippets, referenced-solution)
@@ -59,11 +58,185 @@ Whats are in that API Routes?
 		- Store individual test case results
 		- Fetch submission with test cases(showing to user)
 
-<!-- Chapter-0 END -->
+<!-- Chapter-0 (Intro & Platform work) END -->
 
 
 <br>
 
 
+## Setup & Installation
+Steps -
+1] Create folder - leetlab
+2] Project divide into 2 folders part -
+	- backend (1stly backend approch)
+	- frontend
 
 
+File/Folder Structure -
+```
+Practice - Building a LeetCode Clone - Part 1/
+│── leetlab/            
+│   │── backend
+│   └── frontend
+└── What in that.md
+```
+
+<br>
+
+## Backend setup
+Steps -
+
+1] Move to backend/ -
+```sh
+cd backend
+```
+
+2] For node JS project initialize (related JS)
+```sh
+npm init --y
+```
+
+3] Change `package.json` to below 
+- For latest ES6 features
+"type": "commonjs" => to => "type": "module"  
+
+in that create - `backend/package.json`
+
+package.json
+```json
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": ""
+  
+}
+```
+
+4] Globally install `nodemon`
+That help to do not need to restart backend sever every time.
+```sh
+npm i -g nodemon
+```
+
+File/Folder Structure -
+```
+Practice - Building a LeetCode Clone - Part 1/
+│── leetlab/            
+│   │── backend/
+│		│		│── node_modules
+│		│		│── package-lock.json
+│		│		└── package.json
+│   └── frontend
+└── What in that.md
+```
+
+<br>
+
+### Install Dependencies (basic)
+
+1-1] Install prior dependency is --> `express`
+```sh
+npm i express
+```
+
+### Setup Express JS backend sever in `index.js`
+
+in that create - `backend/src/index.js`
+
+> [!NOTE]
+> - Do not write port no. directly (do not hardcode)
+
+```js
+import express from "express";
+
+const app = express();
+
+app.listen(8080, () =>{
+	console.log("Server is running on port 8080");
+})
+```
+
+File/Folder Structure -
+```
+Practice - Building a LeetCode Clone - Part 1/
+│── leetlab/            
+│   │── backend/
+│		│		│── node_modules
+│		│		│── src
+│		│		│		└── index.js
+│		│		│── package-lock.json
+│		│		└── package.json
+│   └── frontend
+└── What in that.md
+```
+
+### Port no. without directly hardcode -
+
+in that create - `backend/.env`
+
+.env
+```env
+PORT=8080
+```
+
+1-2] Install dependency for using .env --> `dotenv`
+```sh
+npm i dotenv
+```
+
+1-3] Configure `dotenv` in that - `backend/src/index.js`
+
+`index.js`
+```js
+import express from "express";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const app = express();
+
+app.listen(process.env.PORT, () =>{
+	console.log("Server is running on port 8080");
+})
+```
+
+1-4] Run 
+
+```sh
+npm run dev
+```
+
+File/Folder Structure -
+```
+Practice - Building a LeetCode Clone - Part 1/
+│── leetlab/            
+│   │── backend/
+│		│		│── node_modules
+│		│		│── src
+│		│		│		└── index.js
+│		│		│── .env
+│		│		│── package-lock.json
+│		│		└── package.json
+│		│── frontend
+│		└──.gitignore
+└── What in that.md
+```
+
+
+<!-- Basic Setup run successfully END -->
+
+
+------
+
+<br>
+
+
+# Chapter-1
