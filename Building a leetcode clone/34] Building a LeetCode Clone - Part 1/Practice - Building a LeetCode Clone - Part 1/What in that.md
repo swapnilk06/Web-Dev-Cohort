@@ -170,7 +170,7 @@ Practice - Building a LeetCode Clone - Part 1/
 │── leetlab/            
 │   │── backend/
 │		│		│── node_modules
-│		│		│── src
+│		│		│── src/
 │		│		│		└── index.js
 │		│		│── package-lock.json
 │		│		└── package.json
@@ -220,7 +220,7 @@ Practice - Building a LeetCode Clone - Part 1/
 │── leetlab/            
 │   │── backend/
 │		│		│── node_modules
-│		│		│── src
+│		│		│── src/
 │		│		│		└── index.js
 │		│		│── .env
 │		│		│── package-lock.json
@@ -238,5 +238,178 @@ Practice - Building a LeetCode Clone - Part 1/
 
 <br>
 
+-------
 
 # Chapter-1
+
+### Make route realted `Authentication` (that not judge 0)
+
+- Before Authentication we need some space for store the data, JWT tokens, Cookies...
+- We required `Prisma`
+
+1] Install `Prisma` 
+```sh
+npm i prisma
+```
+
+2] Install Prisma related thing i.e. `Prisma Client`
+```sh
+npm i @prisma/client
+```
+
+3] Initialize `Prisma App`
+- Prisma related configuration they are done through it.
+```sh
+npx prisma init
+```
+
+File/Folder Structure -
+```
+Practice - Building a LeetCode Clone - Part 1/
+│── leetlab/            
+│   │── backend/
+│		│		│── node_modules
+│		│		│── prisma/
+│		│		│		└── schema.prisma
+│		│		│── src/
+│		│		│		└── index.js
+│		│		│── .env
+│		│		│── package-lock.json
+│		│		└── package.json
+│		│── frontend
+│		└──.gitignore
+└── What in that.md
+```
+
+> [!NOTE]
+> - Enviroment variable already added in `.env` file 
+> - remove comments from that file.
+
+
+- In that actual prisma related connection link is visible 
+```env
+PORT=8080
+
+DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
+```
+
+4] Install `Docker`
+
+
+5] 2 ways RUN postgres - 
+1) Docker -> Images --> search postgres -> run
+2) Programmer way RUN command in terminal --> 
+
+locally install docker 
+```sh
+docker run --name leetlab -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypassword -p 5432:5432 -d postgres
+```
+
+- In `.env` add below 
+```env
+PORT=8080
+
+DATABASE_URL="postgresql://myuser:mypassword@localhost:5432/postgres"
+```
+
+> [!NOTE]
+> - `-d` : docker mode run in detach mode.
+> - What is application run attach mode & detach mode?
+>	- run in 2 mode 
+> - attach mode : terminal when run that are in attach mode
+>	- detach mode : free the terminal & run in background
+
+
+#### Initialize `Prisma client`
+
+1] Make `libs` folder under --> `backend/src/`
+- Make `prisma client` in that.
+
+2] Make `db.js` under --> `backend/src/libs/`
+
+> [!NOTE]
+> - We start work in `NextJS` in that come with `prisma client`.
+> - prisma client not easily avialable in db
+
+3] Go to `schema.prisma` under --> `backend/prisma/`
+- Make basic model with name, email, id(should generated automatically)
+
+- `ASSIGNMENT` -> Enhance user can upload there image also (suggest cloudenary)
+
+- add to in `schema.prisma`
+```
+enum UserRole {
+  ADMIN
+  USER
+}
+
+model User {
+  id String @id @default(uuid())
+  name String?
+  email String @unique
+  image String?
+  role UserRole @default(USER)
+  password String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+```
+
+4] RUN cmd - 
+- Through that ready of `generated` prisma file
+- 
+```sh
+npx prisma generate
+```
+
+5] add in `db.js` under --> `backend/src/libs/`
+```js
+import {PrismaClient} from "../generated/prisma/index.js";
+
+// prisma best practices 
+
+const globalForPrisma = globalThis;
+
+export const db = globalForPrisma.prisma || new PrismaClient();
+
+//  For optimize appln more & more
+if(process.env.NODE_ENV !== "production") globalForPrisma.prisma = db
+```
+- In under db, all related prisma method & other access in that.
+- We can use prima after that.
+
+
+> [!NOTE]
+> - Under `NodeJS` do not have access of window.
+> - Have `GlobalThis` access only
+
+
+6] Run cmd for `migrate the db` -
+- migrate the new in db
+```sh
+npx prisma migrate dev
+```
+
+7] Commit message - 
+`? Enter a name for the new migration: » usermodel added`
+- new folder added --> `backend/prisma/migrations/`
+- sql related code show under --> `prsima/migrations/...migration.sql`
+
+
+8] RUN cmd -
+- All changes are sync with db.
+```sh
+npx prisma db push
+```
+
+9] RUN cmd -
+- Check program running
+```sh
+npm run dev
+```
+
+<br>
+
+
+###
