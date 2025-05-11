@@ -1,4 +1,4 @@
-#### Revision Timeline - [1:0:0 min]
+#### Revision Timeline - [1:34:0 min]
 
 
 # Chapter-0
@@ -412,4 +412,277 @@ npm run dev
 <br>
 
 
-###
+### Authentication related work
+
+1] Update in that `index.js` --> `backend/src/index.js`
+```js
+import express from "express";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const app = express();
+
+
+app.use(express.json()); // accept json related body
+
+// make 1st End point
+app.get("/", (req, res)=>{
+	res.send("Hello Guys welcome to leetlab🚩")
+}) // home route
+
+
+// Make 1st route of --> Authentication
+app.use("/api/v1/auth", authRoutes);
+
+app.listen(process.env.PORT, () =>{
+	console.log("Server is running on port 8080");
+})
+```
+
+2] Make folder `routes` in --> `src/routes/`
+- All routes are in that folder.
+- Make `auth.routes.js` route in that --> `src/routes/auth.routes.js`
+
+3] Boiler plate code for set auth
+- add in `auth.routes.js`
+```js
+import express from "express";
+
+
+const authRoutes = express.Router();
+
+
+export default authRoutes;
+```
+
+- update in `index.js`
+```js
+import authRoutes from "./routes/auth.routes.js";
+```
+> [!NOTE]
+> - Whole thing required for RUN ...`.js`
+> Precaution to RUN cmd (...leetlab/backend/) -
+> - Check code running
+	```sh
+	npm run dev
+	```
+
+
+<br>
+
+
+### Routes (Register, login, logout, check) 
+- User can able to register in our platform
+- Then login/logout
+- Currenlty login
+
+#### Add end-points that used in backend 
+- Update in `auth.routes.js`
+```js
+import express from "express";
+
+authRoutes.post("/register")
+
+authRoutes.post("/login")
+
+authRoutes.post("/logout")
+
+authRoutes.get("/check")
+
+export default authRoutes;
+```
+
+- Make folder`auth.controllers.js` in that --> `src/controllers/auth.controllers.js`
+
+
+1] Install `bcryptjs`
+- for hashing password & storie in db.
+```sh
+npm i bcryptjs
+```
+
+2] Add in `auth.controller.js`
+```js
+import bcrypt from "bcryptjs";
+
+export const register = async (req, res) => {} // talking with db using async
+
+export const login = async (req, res) => {}
+
+export const logout = async (req, res) => {}
+
+export const check = async (req, res) => {}
+```
+
+> [!NOTE]
+> - `async` used for talk with db
+
+> [!IMPORTANT]
+> - ERROR RESOLVED - for running terminal (ERROR - TypeError: argument handler is required)
+> - Update some boiler code 
+> - Update in `auth.routes.js`
+```js
+import express from "express";
+import { register, login, logout, check } from "../controllers/auth.controller.js";
+
+const authRoutes = express.Router();
+
+// end-points
+authRoutes.post("/register", register)
+
+authRoutes.post("/login", login)
+
+authRoutes.post("/logout", logout)
+
+authRoutes.get("/check", check)
+
+export default authRoutes;
+```
+> - In terminal running 
+	```sh
+	npm run dev
+	```
+> Check in terminal after running `Server is running on port 8080`
+
+<br>
+
+#### Make `register` controller (all work related to register)
+- We required 3 things from users: 
+	- We need a email, password, user name
+- Before register, we always check `user exist or not?`
+- After it `hash the user password`
+- Then `we create new user`
+
+
+1] Install JWT & Cookie Parser
+- RUN cmd
+```sh
+npm i jsonwebtoken cookie-parser
+```
+
+2] Go to `backend/env`
+- Add secret thing for JWT
+- sign in JWT token related of below code -
+```js
+const newUser = await db.user.create({
+			data:{
+				email,
+				password: hashedPassword,
+				name,
+				role:UserRole.USER
+			}
+		}) 
+```
+
+3] Update in `auth.controller.js`
+```js
+import bcrypt from "bcryptjs";
+import {db} from "../libs/db.js";
+import {UserRole} from "../generated/prisma/index.js";
+import jwt from "jsonwebtoken";
+
+export const register = async (req, res) => {
+	const {email , password , name} = req.body;
+
+	try {
+		const existingUser = await db.user.findUnique({
+			where:{
+				email
+			}
+		})
+
+		if(existingUser){
+			return res.status(400).json({
+				error:"User already exists"
+			})
+		}
+
+		const hashedPassword = await bcrypt.hash(password , 10);
+		// Next step onboard user into db 
+
+		const newUser = await db.user.create({
+			data:{
+				email,
+				password: hashedPassword,
+				name,
+				role:UserRole.USER
+			}
+		}) 
+
+		const token = jwt.sign({id:newUser.id}, process.env.jWT_SECRET , {
+			expiresIn: "7d"
+		})
+
+		// for mongodb using we using --> id:newUser._id 
+
+	} catch (error) {
+		
+	}
+} // talking with db using async
+
+export const login = async (req, res) => {}
+
+export const logout = async (req, res) => {}
+
+export const check = async (req, res) => {}
+
+```
+
+4] Go to terminal `gitbash` & RUN cmd -
+```sh
+openssl rand -hex 32
+```
+- That created random string e.g.
+``` 
+ba44048ae2d97ab69efc87806d7a8467cf21eecc00a993c8a4868ff33e051e0e
+```
+
+5] Update that with `.env`
+- JWT token Sign in is done
+```env
+PORT=8080
+
+DATABASE_URL="postgresql://myuser:mypassword@localhost:5432/postgres"
+
+JWT_SECRET = ba44048ae2d97ab69efc87806d7a8467cf21eecc00a993c8a4868ff33e051e0e
+```
+
+<br>
+
+
+#### Configure `Cookie Parser` related things
+- Configuration `Cookie Parser` for user information as a cookie storing in that.
+
+1] Go to `index.js` & update in
+```js
+||
+import cookieParser from "cookie-parser";
+||
+// as a miidlelware
+app.use(cookieParser());
+||
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+> [!IMPORTANT]
+> - `ERROR` : `ERROR RESOLVED in line "522"`
+> - Whenever not write in index.js ==> TypeError: argument handler is required
