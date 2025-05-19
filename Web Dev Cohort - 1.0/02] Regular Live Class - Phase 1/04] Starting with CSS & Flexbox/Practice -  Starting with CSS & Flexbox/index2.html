@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    }
+
+  /* above border cascade with of below border */
+  button {
+    border: 2px solid grey;
+  }
+
+  button {
+    border: 2px solid red;
+  }
+  
+  </style>
+
+</head>
+<body>
+      <button>Click Me</button>
+      <!-- below style cascade as 1st property i.e. Inline CSS -->
+      <button style="border: 2px solid green">Click Me 2</button>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex perspiciatis laboriosam quidem, sequi incidunt debitis. Commodi corrupti dolorem veniam accusantium eius neque dolore, nostrum sed saepe praesentium perferendis earum nesciunt illo esse eum voluptas excepturi assumenda tempore quibusdam corporis ea voluptates libero eligendi ipsam? Perferendis ducimus impedit recusandae eum reprehenderit!</p>
+
+</body>
+</html>

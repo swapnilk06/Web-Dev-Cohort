@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS</title>
+	<style>
+		button {
+			color: red;
+		}
+
+		#btn-1 {
+			color: rgb(166, 255, 0);
+		}
+
+		/* Cascading priority Id wise in top to bottom way */
+		#btn-1 {
+			color: chocolate;
+		}
+
+		/* class do not override to Id */
+		.btn {
+			color: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- In line CSS on direct element is more specificity i.e. no one override this -->
+	<button style="color: blueviolet; text-decoration: overline;" id="btn-1" class="btn">Click Me</button>
+</body>
+</html>

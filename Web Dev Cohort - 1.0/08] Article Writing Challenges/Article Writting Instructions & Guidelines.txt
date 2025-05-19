@@ -1,0 +1,66 @@
+15-01-25
+
+Article Writing Challenges :
+
+- Review live class recordings, 
+- pick a topic from the list, and
+- write a plagiarism-free article per guidlines.
+- Publish it on Hashnode,
+- ensuring clarity,
+- originality, and
+- struture to showcase your understanding,
+- writing skills, and
+- technical knowledge.
+
+
+## Instructions :
+
+- Word Count
+	- Aim for 800-1200 words per article or blog.
+	- Adjust based on the topic's depth.
+
+- Stay Authentic
+	- Avoid copying content from other sources.
+	- Write in your own words to maintain originality.
+	- If you reference data, statistics, or concepts, mention where they're from
+	- Use a conversational tone, ask rhetorical questions, and provide interesting trivia related to the topic.
+
+- Include Digrams
+	- Wherever possible, add diagrams or flowcharts to represent ideas visually.
+	- Tools like Eraser, Excalidraw or even hand-drawn sketches (scanned or photographed) can be used.
+
+- Use Examples 
+	- Include real-world examples or analogies to make complex topics relatable.
+	- For example, compare DNS to a phone book when explaining its function
+	
+- Structure Your Content
+	- Srart with a catchy title that grabs attention.
+	- Begin with an introduction that explains the purpose of the article or blog.
+	- Use subheadings to divide sections logically.
+	- End with a conclusion summarising the key points or giving practical takeaways.
+
+- Write with Clarity
+	- Use simple and clear language.
+	- Avoid technical jargon unless necessary, and explain terms in layman's language.
+	
+
+## Gudielines :
+
+- Introduction
+	- Make the first paragraph engaging. For example, start with a question, fact, or relatable example.
+	- State what the article is ablout and why it's important to learn.
+
+- Body
+	- Use bullet points or numbered lists for clarity when explaining multiple concepts.
+	- Create logical connections between sections to maintain flow.
+
+- Conclusion
+	- Recap the key learnings.
+	- Add a call-to-action, like encouraging readers to try something they learned (e.g., "Check your browser's DNS settings to understand how it works in real-time!").
+	
+- Writing Style
+	- Keep sentences short and easy to read.
+	- Use active voice: "The browser sends a request to the server" instead of "A request is sent by the browser."
+	- Add personal opinions or reflections where appropriate to humanize the content.
+
+

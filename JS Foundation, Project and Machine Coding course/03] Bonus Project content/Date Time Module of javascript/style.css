@@ -1,0 +1,73 @@
+/* Reset styles */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Arial", sans-serif;
+}
+
+/* Dark mode background */
+
+body {
+	background-color: rgb(13, 17, 23);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Clock container styling */
+.clock-container {
+	text-align: center; 
+    background-color: rgba(22, 27, 34, 0.05);
+	padding: 50px;
+    border-radius: 10px;
+	border-color: #ffffff;
+    box-shadow: 
+        0 0 15px rgba(0, 0, 0, 0.8) ,
+        inset 0 0 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid transparent;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.clock-container:hover {
+    transform: scale(1.01);
+    box-shadow: 
+        0 0 30px rgba(0, 0, 0, 1);
+}
+
+
+
+/* Time styling */
+#time {
+	border-radius: 10px;
+	padding: 10px 20px;
+    font-size: 70px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px #ffffff, 
+        0 0 20px rgba(255, 255, 255, 0.9),
+        0 0 30px rgba(255, 255, 255, 0.8);
+	animation: glow 1.3s infinite alternate;
+}
+
+
+/* Time Animation */
+@keyframes glow {
+    0% { text-shadow: 0 0 10px rgba(255, 255, 255,0.1); }
+    50% { text-shadow: 0 0 30px rgba(255, 255, 255,0.2); }
+    100% { text-shadow: 0 0 10px rgba(255, 255, 255,0.3); }
+}
+
+
+/* Date styling */
+#date {
+	margin-top: 15px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.8);
+}
