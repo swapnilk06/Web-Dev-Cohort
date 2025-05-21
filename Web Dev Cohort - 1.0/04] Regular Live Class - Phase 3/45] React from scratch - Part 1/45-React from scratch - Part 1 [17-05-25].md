@@ -1,5 +1,5 @@
 # 45 - React from scratch - Part 1
-[Date : 17-05-25] - [Timeline : 01:8:30 min]
+[Date : 17-05-25] - [Timeline : 01:22:00 min]
 
 ### What we learn?
 - [x] React Framework Basic
@@ -369,10 +369,168 @@ const root = ReactDOM.createRoot(container)
 root.render(React.createElement(App))
 ```
 
+
+#### Classic React working Summary 
+
+- In `App.js` load javascript & it handle properly, we can use Javascript module in that.
+- No any usecase of react-dom in that its only classic react -
+```js
+const App = () => {
+	return  React.createElement(
+		"div",
+		{},
+		React.createElement(
+			"h1", {}, "Chai, chill and react - React - 18")
+	);
+};
+```
+- React gives `createElement` method & using that create 3 elements -
+	- 1) Which element can we build? i.e. `div`
+	- 2) What properties inside in i.e. `{}`
+	- 3) Children i.e. also a single or multi array.
+
+- Below that shows target the root inside `HTML`.
+```js
+const container = document.getElementById("root")
+```
+- React DOM is takeover that i.e. `createRoot` is create as `virtual DOM`
+```js
+const root = ReactDOM.createRoot(container)
+```
+
+- Instruct to root render as add in that
+```js 
+root.render(React.createElement(App))
+```
+
+#### React done that work behind the scene intelligently
+- Every time new element came in react then its compare two elements -
+	- 1) `We can remove whole code & rewrite` OR
+	- 2) `Remove only some code part`
+- i.e. React `Diffing algorithm`.
+- E.g. Diffing best example is git that can showing only which code are changed.
+- `Reconcilation in React` : All over that mechanism intelligently their engine work that is which ever part can remove i.e. Reconcilation.
+
+
+> [!IMPORTANT]
+> - Virtual DOM is programatic DOM i.e. control through code.
+
+
 ----
 
 <br>
 
+## REACT Chapter - 3 : Props make power
+
+#### Guess the structure
+- Make some method in `App.js` & we can guess that structure?
+
+```js
+const Chai = () => {
+	return  React.createElement("div", {}, [
+		React.createElement("h1", {}, "Masala Chai"),
+		React.createElement("p", {}, "Ginger Chai"),
+	])
+}
+
+const App = () => {
+	return  React.createElement("div", {}, [
+		React.createElement("h1", {}, "Chai Variations by Chaicode"),
+		React.createElement(Chai)
+	]);
+};
+```
+![alt text](guess-structure.png)
+<br>
+
+
+- We can guess the structure?
+```js
+const Chai = () => {
+	return  React.createElement("div", {}, [
+		React.createElement("h1", {}, "Masala Chai"),
+		React.createElement("p", {}, "Ginger Chai"),
+	])
+}
+
+const App = () => {
+	return  React.createElement("div", {}, [
+		React.createElement("h1", {}, "Chai Variations by Chaicode"),
+		React.createElement(Chai),
+		React.createElement(Chai),
+		React.createElement(Chai),
+		React.createElement(Chai),
+	]);
+};
+```
+![alt text](guess-structure-2.png)
+<br>
+
+
+#### Use of props
+- Make `App2.js` & we make `props` in that
+- Props i.e. properties its -> `object`.
+`App2.js`
+```js
+import React from "https://esm.sh/react@19.1.0";
+import ReactDOM from "https://esm.sh/react-dom@19.1.0/client";
+
+const Chai = (props) => {
+	console.log(props);
+
+	return  React.createElement("div", {}, [
+		React.createElement("h1", {}, props.name),
+		React.createElement("p", {}, props.cost),
+	]);
+};
+
+const App = () => {
+	return  React.createElement("div", {}, [
+		React.createElement("h1", {}, "Chai Variations by Chaicode"),
+		React.createElement(Chai, {
+			name: "Masala Chai",
+			cost: "1000",
+		}),
+		React.createElement(Chai, {
+			name: "Ginger Chai",
+			cost: "1000",
+		}),
+		React.createElement(Chai, {
+			name: "Lemon Tea",
+			cost: "1000",
+		}),
+		React.createElement(Chai, {
+			name: "Ice Tea",
+			cost: "1000",
+		}),
+	]);
+};
+
+const container = document.getElementById("root")
+const root = ReactDOM.createRoot(container)
+root.render(React.createElement(App))
+```
+- What just happen in that?
+- We can make `generic component` in react language (or function) -
+```js
+const Chai = (props) => {
+	console.log(props);
+
+	return  React.createElement("div", {}, [
+		React.createElement("h1", {}, props.name),
+		React.createElement("p", {}, props.cost),
+	]);
+};
+```
+- `That components are resuable` after implementing props in that.
+- `Props` make any component that are resuable, it give main power to component, for make dynamic component using props. 
+
+
+----
+
+<br>
+
+## REACT Chapter - 4 : Useful for team
 
 
 
@@ -423,3 +581,7 @@ root.render(React.createElement(App))
 - [x] `React v19 is not execute in server side` bcz, this side no any browser.
 	- That is problem of next.js developer without React learning.
 - [x] Investigate in JS using inspect Console & Network tab.
+- [x] Dum components v/s Components in REACT.
+	- Dum means its can get same output always.
+- [x] `{}` -> that for attribute/property
+	- Attribute is not only css class or id also other thing in that.
