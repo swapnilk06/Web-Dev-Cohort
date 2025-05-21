@@ -530,10 +530,25 @@ const Chai = (props) => {
 
 <br>
 
-## REACT Chapter - 4 : Useful for team
+## REACT Chapter - 4 : React useful for team work
+- Install pacakges -> `npm init -y`
+- Install prettier for auto completed,spaces,semicolon... -> `npm install --save-dev prettier`
+- In that `devDependencies` are not goes to production that used for self.
+- `.prettierrc` in that for just beautification, that file we can use for in our project -> `touch .prettierrc`.
+- `.prettierignore` that for do not touch anythin in that of files -> `touch .prettierignore`
+- Write script for prettier run for all that files in -> `package.json`.
+- script prettier format of all files.
+```json
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,html}\""
+	},
+```
 
+----
 
+<br>
 
+## REACT Chapter - 5 : 
 
 
 
@@ -568,6 +583,7 @@ const Chai = (props) => {
 - [x] Less information, less problem (in case of `Don't hunt Hooks`).
 - [x] Try to run `brain.exe`
 - [x] Consistent code is very appreciated.
+- [x] How to write in `.prettierrc` learn doc.
 
 
 
