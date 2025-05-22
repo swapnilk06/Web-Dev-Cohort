@@ -1,5 +1,5 @@
 # 45 - React from scratch - Part 1
-[Date : 17-05-25] - [Timeline : 01:22:00 min]
+[Date : 17-05-25] - [Timeline : 01:33:00 min]
 
 ### What we learn?
 - [x] React Framework Basic
@@ -548,10 +548,37 @@ const Chai = (props) => {
 
 <br>
 
-## REACT Chapter - 5 : 
+## REACT Chapter - 5 : Linting for clean & consistant code
+- Install eslint ->  `npm install --save-dev eslint`
+- Initiate eslint -> `npx eslint --init` -
+- Ok 'y' to proceed? select steps :
+  -> JavaScript 
+	-> To check syntax only 
+	-> JavaScript modules(import/exports) 
+	-> react 
+	-> no(TypeScript) 
+	-> browser 
+	-> yes(eslint-plugin-react) 
+	-> npm
+
+- Linting error inspector (warning)
+
+- In old time linting writing is more difficult. They give recommanded directly
+```mjs
+pluginReact.configs.flat.recommended,
+```
+- Linting prevent we to falling in abouse errors & it `help for prevent writting of bad code`.
+	- e.g. we can write all in global pattern then, it gives red line. 
+- Linting doesnot prevent code execution `its work like error insepector`(warn the bad code).
+- Prevent that using writing `clean & consistant code`.
+- We can import any dependency but we can't used that, technically remove it. -> `That hint give by linting`.
 
 
+----
 
+<br>
+
+## REACT Chapter -  :
 
 > [!NOTE]
 > - 
@@ -568,7 +595,8 @@ const Chai = (props) => {
 
 <br>
 
----
+-----
+-----
 
 ### What we learn next time?
 - [x] 
@@ -584,6 +612,7 @@ const Chai = (props) => {
 - [x] Try to run `brain.exe`
 - [x] Consistent code is very appreciated.
 - [x] How to write in `.prettierrc` learn doc.
+- [x] Setting/config are high level as company base.
 
 
 
@@ -601,3 +630,9 @@ const Chai = (props) => {
 	- Dum means its can get same output always.
 - [x] `{}` -> that for attribute/property
 	- Attribute is not only css class or id also other thing in that.
+- [x] `Where does your code run`? Browser OR Node 
+	- Why that question ask in react?
+	- We can understand philosophy, there was 2 teams :
+		- 1st send `react to browser`
+		- 2nd send `react to node/server`
+
