@@ -1,5 +1,5 @@
 # 45 - React from scratch - Part 1
-[Date : 17-05-25] - [Timeline : 01:33:00 min]
+[Date : 17-05-25] - [Timeline : 02:00:00 min]
 
 ### What we learn?
 - [x] React Framework Basic
@@ -578,7 +578,49 @@ pluginReact.configs.flat.recommended,
 
 <br>
 
-## REACT Chapter -  :
+## REACT Chapter - 6 : Babel - HTML support in JavaScript
+- [x] Problem is we have don't interested to write below type JS
+![alt text](React-understand-only.png)
+
+- [x] Solution is we can write below type JS but, React don't understand that.
+![alt text](React-not-understand.png)
+
+- [x] Some interfaces are work like bridge between HTML & JS in on place 
+- Many libraries provide that interface, famous 1 is `babel`
+![alt text](babel.png)
+- Babel is Javascript Compiler
+
+-[x] Load babel
+- babel.js/babel.min.js 
+- `https://unpkg.com/babel-standalone@6.26.0/babel.min.js`
+
+- [x] Problem is that `<script type="text/babel">`we have tell to him for that I've writing babel in script.
+- Problem is we can write 'type' in one .time.
+- For that CDN way is difficult, that reasons many tool come react tool, vite, next.js.. that are configured all that.
+
+- Script goes to 1st -> Babel -> babel make it react compatable -> & handover to react.
+
+ 
+----
+
+<br>
+
+
+## Behind The Scene -
+- > Client vs Server side
+- > React with CDN
+- > React 18 vs 19
+- > Render, Virtual DOM
+- > Prettier
+- > Linting
+- > Biome
+- > Manual props
+- > Babel
+- > Components 
+
+
+
+
 
 > [!NOTE]
 > - 
@@ -613,6 +655,7 @@ pluginReact.configs.flat.recommended,
 - [x] Consistent code is very appreciated.
 - [x] How to write in `.prettierrc` learn doc.
 - [x] Setting/config are high level as company base.
+- [x] Eslint similar `Biome`(format,lint)
 
 
 
