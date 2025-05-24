@@ -1,5 +1,5 @@
 # 45 - React from scratch - Part 1
-[Date : 17-05-25] - [Timeline : 02:00:00 min]
+[Date : 17-05-25] - [Timeline : 02:55:00 min]
 
 ### What we learn?
 - [x] React Framework Basic
@@ -80,6 +80,7 @@ createRoot(document.getElementById('root')).render(
 
 <br>
 
+# React Phase - 1
 
 ## REACT Chapter - 1 : Ways of React work
 
@@ -619,6 +620,149 @@ pluginReact.configs.flat.recommended,
 - > Components 
 
 
+-----
+
+<br>
+
+# React Phase - 2
+
+## REACT Chapter - 7 : Vite understanding
+- Build Tool for the Web
+- multipaged JS in single page.
+
+#### React classic way installation through npm (before we used CDN way)
+
+-[x] Goal : CDN work replace `NPM`
+
+- 1] For package.json
+```sh
+npm init -y
+```
+
+- 2] Make other files in package.json 
+```sh
+touch index.html index.js App.js
+```
+
+- 3] `index.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root"></div>
+	<script src="./index.js"></script>
+</body>
+</html>
+```
+
+- 4] In `index.js` we can give controller of `index.html` to REACT.
+- That for we install react & react-dom
+```sh
+npm i react react-dom
+```
+- After that we can use react instead of CDN.
+- [x] How to use?
+`index.js`
+```
+import React from "react"
+import ReactDM from "react-dom"
+```
+
+- import App.js in -> `index.js`
+```js
+import React from "react"
+import ReactDOM from "react-dom"
+
+import { App } from "./App.js"
+
+const root = ReactDOM.createRoot(d0cument.getElementById("root"))
+root.render(<App />)
+```
+
+`App.js`
+```js
+export function App() {
+
+	return (
+		<div>
+			<h1>Welcome to chaicode</h1>
+			<p>Serving hot chai with react</p>
+		</div>
+	)
+}
+```
+
+- [x] But its not working?
+- We can use modern build tool.
+	- Using of build tool for, they use jsx, esmodule, mordern JS syntax...
+- Many build tool are available, esbuild, rollup.js..
+
+> [!NOTE]
+> - Vite is that of package, that came with all build tool as, esbuild(for development), rollup.js(for production).
+> - That all work in behind the scene.
+
+- Vite alternatives : webpack, parcels, snowpack, rspacks
+
+
+#### Manual way installation of Vite
+- vite & vite plugin for react dev dependencies 
+```sh
+npm install --save-dev vite @vitejs/plugin-react
+```
+
+- [x] After installation Vite or other like parcel all have needed their own configuration
+- Create new file `vite.config.js` 
+- Don't create that file manually.
+
+### Vite Expectations/Rules
+- `src` folder
+- & index.js, App.js are placed in `src folder` only.
+- We can write any type of below codes -
+```js
+root.render(<App />)
+```
+OR
+```js
+<div>
+			<h1>Welcome to chaicode</h1>
+			<p>Serving hot chai with react</p>
+		</div>
+```
+- We can write for that `jsx`.
+- Renamed that App.js to -> App.jsx & index.js to -> index.jsx
+
+> [!NOTE]
+> - Write `jsx` its vite rule.
+
+### How to run?
+- Go to `package.json` & write script to handover vite. 
+```json
+"scripts": {
+    "dev": "vite"
+  },
+```
+- After that, vite automatically go to -> `vite.config.js` file & tell to run react i.e. `plugins: [react()],`.
+	- Check react according syntax of our file as all in src folder, files are jsx
+
+- npm run dev
+
+### Fix issue when we build from scratch
+- Add `"type": "module"` in `package.json` & in script tag of `index.html` 
+- Add client when react import -> `import ReactDOM from "react-dom/client";`
+
+
+
+-----
+
+<br>
+
+
+## REACT Chapter - 8 : 
 
 
 
@@ -644,8 +788,12 @@ pluginReact.configs.flat.recommended,
 - [x] 
 
 
-### Project Ideas 
-- [x] 
+### How to fix this? 
+- [x] The CJS build of Vite's Node API is deprecated.
+	- i.e. type module error
+	- `<script type="module" src="./src/index.jsx"></script>`
+	- Also add `"type": "module"` in `package.json`
+
 
 
 ### Things to do
@@ -656,6 +804,7 @@ pluginReact.configs.flat.recommended,
 - [x] How to write in `.prettierrc` learn doc.
 - [x] Setting/config are high level as company base.
 - [x] Eslint similar `Biome`(format,lint)
+- [x] Old time do babel like work after it "create react app" in market.
 
 
 
@@ -678,4 +827,10 @@ pluginReact.configs.flat.recommended,
 	- We can understand philosophy, there was 2 teams :
 		- 1st send `react to browser`
 		- 2nd send `react to node/server`
+- Web pack i.e. bundler
+- What is HMR(Hot Module Replacement)?
+	- Live reload (Live server is our HMR).
 
+
+### Project Idea
+- [x] 
